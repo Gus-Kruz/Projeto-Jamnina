@@ -1,3 +1,139 @@
 [gd_scene format=3 uid="uid://dkxdmdjio26ey"]
 
-[node name="Censurador" type="Node2D" unique_id=1177385418]
+[ext_resource type="Script" uid="uid://ds0y4ujdsyoxx" path="res://scripts/censurador.gd" id="1_16162"]
+[ext_resource type="Texture2D" uid="uid://dxqrfxlpv3b25" path="res://artes/guarda/andar1/Ilustração_Sem_Título-2.png" id="2_fyhhu"]
+[ext_resource type="Texture2D" uid="uid://dotllboqb0m0i" path="res://artes/guarda/andar1/Ilustração_Sem_Título-3.png" id="3_bg2bu"]
+[ext_resource type="Texture2D" uid="uid://bew84j6o4hgl0" path="res://artes/guarda/andar1/Ilustração_Sem_Título-1.png" id="4_73ul5"]
+[ext_resource type="Texture2D" uid="uid://dip2po4csv7im" path="res://artes/guarda/andar2/Ilustração_Sem_Título-2.png" id="5_1se2k"]
+[ext_resource type="Texture2D" uid="uid://ji3xr3kaxxcn" path="res://artes/guarda/andar2/Ilustração_Sem_Título-3.png" id="6_0i4l4"]
+[ext_resource type="Texture2D" uid="uid://br1y02hwlvyld" path="res://artes/guarda/andar2/Ilustração_Sem_Título-1.png" id="7_mmo5i"]
+[ext_resource type="Texture2D" uid="uid://dnqmd6nxniase" path="res://artes/guarda/andar3/Ilustração_Sem_Título-2.png" id="8_u2im3"]
+[ext_resource type="Texture2D" uid="uid://babgxat4exgd3" path="res://artes/guarda/andar3/Ilustração_Sem_Título-3.png" id="9_uxgu5"]
+[ext_resource type="Texture2D" uid="uid://dch1vdx3sfq0p" path="res://artes/guarda/andar3/Ilustração_Sem_Título-1.png" id="10_suk12"]
+[ext_resource type="Texture2D" uid="uid://b0hehs4r5insu" path="res://artes/guarda/correr1/Ilustração_Sem_Título-2.png" id="11_bl4l0"]
+[ext_resource type="Texture2D" uid="uid://5bn8yyxu6p02" path="res://artes/guarda/correr1/Ilustração_Sem_Título-3.png" id="12_72rhs"]
+[ext_resource type="Texture2D" uid="uid://cyvbln6hkbv4l" path="res://artes/guarda/correr1/Ilustração_Sem_Título-1.png" id="13_awhtp"]
+[ext_resource type="Texture2D" uid="uid://58k7ra0s7ojl" path="res://artes/guarda/correr2/Ilustração_Sem_Título-2(1).png" id="14_af8il"]
+[ext_resource type="Texture2D" uid="uid://wp8lx1e513hq" path="res://artes/guarda/correr2/Ilustração_Sem_Título-3(1).png" id="15_vqsxq"]
+[ext_resource type="Texture2D" uid="uid://dnshptwc0vxpj" path="res://artes/guarda/correr2/Ilustração_Sem_Título-1(1).png" id="16_a6110"]
+[ext_resource type="Texture2D" uid="uid://cb0stqjcscmsa" path="res://artes/guarda/correr3/Ilustração_Sem_Título-5.png" id="17_ccxy0"]
+[ext_resource type="Texture2D" uid="uid://d2scfqrptrhgv" path="res://artes/guarda/correr3/Ilustração_Sem_Título-6.png" id="18_ncxy5"]
+[ext_resource type="Texture2D" uid="uid://b2rti34wkmthx" path="res://artes/guarda/correr3/Ilustração_Sem_Título-4.png" id="19_glk7d"]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_tn3cb"]
+points = PackedVector2Array(0, -33, 80, -34, 100, 0, 78, 37)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eeh76"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fyhhu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_bg2bu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_73ul5")
+}],
+"loop": 1,
+"name": &"andar1",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_1se2k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_0i4l4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_mmo5i")
+}],
+"loop": 1,
+"name": &"andar2",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_u2im3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_uxgu5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_suk12")
+}],
+"loop": 1,
+"name": &"andar3",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_bl4l0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_72rhs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_awhtp")
+}],
+"loop": 1,
+"name": &"correr1",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_af8il")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_vqsxq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_a6110")
+}],
+"loop": 1,
+"name": &"correr2",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_ccxy0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ncxy5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_glk7d")
+}],
+"loop": 1,
+"name": &"correr3",
+"speed": 9.0
+}]
+
+[sub_resource type="Curve2D" id="Curve2D_7jxve"]
+bake_interval = 0.01
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 100, 0, 0, 0, 0, 0, -100, 0)
+}
+point_count = 2
+
+[node name="Censurador" type="CharacterBody2D" unique_id=2135449001 node_paths=PackedStringArray("patrol_path")]
+script = ExtResource("1_16162")
+patrol_path = NodePath("Path2D")
+
+[node name="DetectRadius" type="Area2D" parent="." unique_id=1144528655]
+collision_priority = 0.0
+
+[node name="Visao" type="CollisionShape2D" parent="DetectRadius" unique_id=363715788]
+shape = SubResource("ConvexPolygonShape2D_tn3cb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=593382912]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_eeh76")
+animation = &"andar1"
+
+[node name="Path2D" type="Path2D" parent="." unique_id=674690319]
+curve = SubResource("Curve2D_7jxve")
+
+[connection signal="body_entered" from="DetectRadius" to="." method="_on_detect_radius_body_entered"]
+[connection signal="body_exited" from="DetectRadius" to="." method="_on_detect_radius_body_exited"]
