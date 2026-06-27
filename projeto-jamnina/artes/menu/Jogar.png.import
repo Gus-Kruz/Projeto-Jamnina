@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dlf2huabsr7ma"
-path="res://.godot/imported/IMG_0196.PNG-c2de2221eb326a105489f13650d10a62.ctex"
+uid="uid://c6cp8s4bptnhh"
+path="res://.godot/imported/Jogar.png-9a724d429404bfdc67895c795368ae92.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://artes/parado/IMG_0196.PNG"
-dest_files=["res://.godot/imported/IMG_0196.PNG-c2de2221eb326a105489f13650d10a62.ctex"]
+source_file="res://artes/menu/Jogar.png"
+dest_files=["res://.godot/imported/Jogar.png-9a724d429404bfdc67895c795368ae92.ctex"]
 
 [params]
 
