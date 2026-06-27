@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dxxjkmjo0xf5a"]
+
+[ext_resource type="PackedScene" uid="uid://c8rol64plk7le" path="res://cenas/chão.tscn" id="1_ycj3v"]
+[ext_resource type="PackedScene" uid="uid://cith6nwb12npx" path="res://cenas/personagem.tscn" id="2_kn2re"]
+
+[node name="Node2D" type="Node2D" unique_id=1497396039]
+
+[node name="Node2D" parent="." unique_id=1769249425 instance=ExtResource("1_ycj3v")]
+position = Vector2(644, 1014)
+scale = Vector2(10, 1)
+
+[node name="carteiro" parent="." unique_id=178538168 instance=ExtResource("2_kn2re")]
+position = Vector2(294, 746)

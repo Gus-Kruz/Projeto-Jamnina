@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cith6nwb12npx"]
+
+[ext_resource type="Texture2D" uid="uid://bhjt3fpkg2bjl" path="res://icon.svg" id="1_5h1iu"]
+[ext_resource type="Script" uid="uid://bbedmtrruf2uy" path="res://scripts/character_body_2d.gd" id="2_fgfoh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tyg5f"]
+size = Vector2(42, 127)
+
+[node name="carteiro" type="CharacterBody2D" unique_id=1227779810]
+script = ExtResource("2_fgfoh")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=543072039]
+scale = Vector2(0.5, 1)
+texture = ExtResource("1_5h1iu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1474937378]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_tyg5f")
+
+[node name="Timer" type="Timer" parent="." unique_id=245916974]
+wait_time = 0.1
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=708140231]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
