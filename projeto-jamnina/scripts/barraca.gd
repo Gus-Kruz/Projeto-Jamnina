@@ -17,11 +17,9 @@ signal saiu
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "carteiro":
 		entrou.emit()
-		print("dentro")
 
 
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body.name == "carteiro":
 		saiu.emit()
-		print("fora")
