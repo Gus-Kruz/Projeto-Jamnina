@@ -21,13 +21,14 @@ func _physics_process(delta):
 	choose_action()
 	if target:
 		if target.x > position.x:
-			$AnimatedSprite2D.scale.x = 1
+			$AnimatedSprite2D.scale.x = 2
 			$DetectRadius/Visao.scale.x = 1
+			$PegacaoArea/Alcance.scale.x = 1
 		elif target.x < position.x:
-			$AnimatedSprite2D.scale.x = -1
+			$AnimatedSprite2D.scale.x = -2
 			$DetectRadius/Visao.scale.x = -1
-		velocity = position.direction_to(target) * run_speed
-
+			$PegacaoArea/Alcance.scale.x = -1
+		velocity.x = position.direction_to(target)[0] * run_speed
 	move_and_slide()
 
 func choose_action():
@@ -44,9 +45,15 @@ func choose_action():
 			target = player.position
 
 func _on_detect_radius_body_entered(body):
-	player = body
-	state = states.CHASE
+	if body.is_in_group("Carteiro"):
+		player = body
+		state = states.CHASE
 
 func _on_detect_radius_body_exited(body):
-	player = null
-	state = states.PATROL
+	if body.is_in_group("Carteiro"):
+		player = null
+		state = states.PATROL
+
+func _on_pegacao_area_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Carteiro"):
+		get_tree().reload_current_scene()

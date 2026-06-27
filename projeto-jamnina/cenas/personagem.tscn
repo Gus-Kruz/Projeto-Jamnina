@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://cith6nwb12npx"]
 
-[ext_resource type="Texture2D" uid="uid://dlf2huabsr7ma" path="res://artes/parado/IMG_0196.PNG" id="2_c6r7t"]
+[ext_resource type="Texture2D" uid="uid://dlf2huabsr7ma" path="res://artes/carteiro/parado/IMG_0196.PNG" id="2_c6r7t"]
 [ext_resource type="Script" uid="uid://bbedmtrruf2uy" path="res://scripts/character_body_2d.gd" id="2_fgfoh"]
-[ext_resource type="Texture2D" uid="uid://c36df4rricii4" path="res://artes/andar/IMG_0193.PNG" id="3_c6r7t"]
-[ext_resource type="Texture2D" uid="uid://bgj6leoqsasec" path="res://artes/andar/IMG_0194.PNG" id="4_d05dr"]
-[ext_resource type="Texture2D" uid="uid://bc2rfqjohpnsi" path="res://artes/andar/IMG_0195.PNG" id="5_foddy"]
-[ext_resource type="Texture2D" uid="uid://b6rmbwel5uupm" path="res://artes/pular/Ilustração_Sem_Título-1.png" id="6_foddy"]
-[ext_resource type="Texture2D" uid="uid://dewed3huwrh04" path="res://artes/pular/Ilustração_Sem_Título-2.png" id="7_3o8vf"]
+[ext_resource type="Texture2D" uid="uid://c36df4rricii4" path="res://artes/carteiro/andar/IMG_0193.PNG" id="3_c6r7t"]
+[ext_resource type="Texture2D" uid="uid://bgj6leoqsasec" path="res://artes/carteiro/andar/IMG_0194.PNG" id="4_d05dr"]
+[ext_resource type="Texture2D" uid="uid://bc2rfqjohpnsi" path="res://artes/carteiro/andar/IMG_0195.PNG" id="5_foddy"]
+[ext_resource type="Texture2D" uid="uid://b6rmbwel5uupm" path="res://artes/carteiro/pular/Ilustração_Sem_Título-1.png" id="6_foddy"]
+[ext_resource type="Texture2D" uid="uid://dewed3huwrh04" path="res://artes/carteiro/pular/Ilustração_Sem_Título-2.png" id="7_3o8vf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tyg5f"]
 size = Vector2(35, 112)
@@ -23,7 +23,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("5_foddy")
 }],
-"loop": true,
+"loop": 1,
 "name": &"andar",
 "speed": 9.0
 }, {
@@ -31,7 +31,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("2_c6r7t")
 }],
-"loop": true,
+"loop": 1,
 "name": &"parado",
 "speed": 5.0
 }, {
@@ -45,12 +45,12 @@ animations = [{
 "duration": 2.0,
 "texture": ExtResource("6_foddy")
 }],
-"loop": true,
+"loop": 1,
 "name": &"pular",
 "speed": 5.0
 }]
 
-[node name="carteiro" type="CharacterBody2D" unique_id=1227779810]
+[node name="carteiro" type="CharacterBody2D" unique_id=1227779810 groups=["Carteiro"]]
 script = ExtResource("2_fgfoh")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=543072039]
@@ -58,7 +58,7 @@ visible = false
 scale = Vector2(0.5, 1)
 texture = ExtResource("2_c6r7t")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1474937378]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1474937378 groups=["Carteiro"]]
 position = Vector2(-6.5, 0)
 shape = SubResource("RectangleShape2D_tyg5f")
 

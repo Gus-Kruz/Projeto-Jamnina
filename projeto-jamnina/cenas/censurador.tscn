@@ -21,7 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://b2rti34wkmthx" path="res://artes/guarda/correr3/Ilustração_Sem_Título-4.png" id="19_glk7d"]
 
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_tn3cb"]
-points = PackedVector2Array(0, -33, 80, -34, 100, 0, 78, 37)
+points = PackedVector2Array(13, -30, 80, -34, 100, 0, 78, 37)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_eeh76"]
 animations = [{
@@ -110,20 +110,20 @@ animations = [{
 "speed": 9.0
 }]
 
-[sub_resource type="Curve2D" id="Curve2D_7jxve"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 100, 0, 1, 0, 0, 0, -100, 0)
-}
-point_count = 2
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7jxve"]
+size = Vector2(30, 110)
 
-[node name="Censurador" type="CharacterBody2D" unique_id=2135449001 node_paths=PackedStringArray("patrol_path")]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tn3cb"]
+size = Vector2(39, 78)
+
+[node name="Censurador" type="CharacterBody2D" unique_id=2135449001]
 script = ExtResource("1_16162")
-patrol_path = NodePath("Path2D")
 
 [node name="DetectRadius" type="Area2D" parent="." unique_id=1144528655]
 collision_priority = 0.0
 
 [node name="Visao" type="CollisionShape2D" parent="DetectRadius" unique_id=363715788]
+position = Vector2(-13, -2)
 shape = SubResource("ConvexPolygonShape2D_tn3cb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=593382912]
@@ -131,8 +131,16 @@ scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_eeh76")
 animation = &"andar1"
 
-[node name="Path2D" type="Path2D" parent="." unique_id=674690319]
-curve = SubResource("Curve2D_7jxve")
+[node name="Hitbox" type="CollisionShape2D" parent="." unique_id=57765969]
+position = Vector2(-4, -1)
+shape = SubResource("RectangleShape2D_7jxve")
+
+[node name="PegacaoArea" type="Area2D" parent="." unique_id=1463999697]
+
+[node name="Alcance" type="CollisionShape2D" parent="PegacaoArea" unique_id=858231144]
+top_level = true
+shape = SubResource("RectangleShape2D_tn3cb")
 
 [connection signal="body_entered" from="DetectRadius" to="." method="_on_detect_radius_body_entered"]
 [connection signal="body_exited" from="DetectRadius" to="." method="_on_detect_radius_body_exited"]
+[connection signal="body_entered" from="PegacaoArea" to="." method="_on_pegacao_area_body_entered"]

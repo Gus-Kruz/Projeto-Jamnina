@@ -5,10 +5,17 @@
 [ext_resource type="PackedScene" uid="uid://cith6nwb12npx" path="res://cenas/personagem.tscn" id="2_kn2re"]
 [ext_resource type="PackedScene" uid="uid://v1j86q35s7p" path="res://cenas/barraca.tscn" id="3_kn2re"]
 
+[sub_resource type="Curve2D" id="Curve2D_2yrcx"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1163, 893, 1, 0, 0, 0, 996, 893)
+}
+point_count = 2
+
 [node name="Node2D" type="Node2D" unique_id=1497396039]
 
-[node name="Censurador" parent="." unique_id=1177385418 instance=ExtResource("1_2yrcx")]
+[node name="Censurador" parent="." unique_id=1177385418 node_paths=PackedStringArray("patrol_path") instance=ExtResource("1_2yrcx")]
 position = Vector2(1076, 893)
+patrol_path = NodePath("../path_patrol")
 
 [node name="Node2D" parent="." unique_id=1769249425 instance=ExtResource("1_ycj3v")]
 position = Vector2(644, 1014)
@@ -21,6 +28,9 @@ position = Vector2(294, 746)
 z_index = -1
 position = Vector2(686.99994, 825.00006)
 scale = Vector2(2, 2)
+
+[node name="path_patrol" type="Path2D" parent="." unique_id=142645807]
+curve = SubResource("Curve2D_2yrcx")
 
 [connection signal="entrou" from="Barraca" to="carteiro" method="_on_barraca_entrou"]
 [connection signal="saiu" from="Barraca" to="carteiro" method="_on_barraca_saiu"]
