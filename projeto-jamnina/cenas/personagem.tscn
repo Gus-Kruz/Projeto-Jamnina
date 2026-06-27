@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dewed3huwrh04" path="res://artes/pular/Ilustração_Sem_Título-2.png" id="7_3o8vf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tyg5f"]
-size = Vector2(26, 58)
+size = Vector2(35, 112)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3o8vf"]
 animations = [{
@@ -59,7 +59,7 @@ scale = Vector2(0.5, 1)
 texture = ExtResource("2_c6r7t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1474937378]
-position = Vector2(-2, -1)
+position = Vector2(-6.5, 0)
 shape = SubResource("RectangleShape2D_tyg5f")
 
 [node name="Timer" type="Timer" parent="." unique_id=245916974]
@@ -68,9 +68,9 @@ wait_time = 0.1
 [node name="Camera2D" type="Camera2D" parent="." unique_id=708140231]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2071489530]
+z_index = 2
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_3o8vf")
-animation = &"pular"
-frame_progress = 0.9703679
+animation = &"parado"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

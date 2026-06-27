@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c8rol64plk7le" path="res://cenas/chão.tscn" id="1_ycj3v"]
 [ext_resource type="PackedScene" uid="uid://cith6nwb12npx" path="res://cenas/personagem.tscn" id="2_kn2re"]
+[ext_resource type="PackedScene" uid="uid://v1j86q35s7p" path="res://cenas/barraca.tscn" id="3_kn2re"]
 
 [node name="Node2D" type="Node2D" unique_id=1497396039]
 
@@ -11,3 +12,11 @@ scale = Vector2(10, 1)
 
 [node name="carteiro" parent="." unique_id=178538168 instance=ExtResource("2_kn2re")]
 position = Vector2(294, 746)
+
+[node name="Barraca" parent="." unique_id=940644642 instance=ExtResource("3_kn2re")]
+z_index = -1
+position = Vector2(686.99994, 825.00006)
+scale = Vector2(2, 2)
+
+[connection signal="entrou" from="Barraca" to="carteiro" method="_on_barraca_entrou"]
+[connection signal="saiu" from="Barraca" to="carteiro" method="_on_barraca_saiu"]
