@@ -111,9 +111,8 @@ animations = [{
 }]
 
 [sub_resource type="Curve2D" id="Curve2D_7jxve"]
-bake_interval = 0.01
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 100, 0, 0, 0, 0, 0, -100, 0)
+"points": PackedVector2Array(0, 0, 0, 0, 100, 0, 1, 0, 0, 0, -100, 0)
 }
 point_count = 2
 

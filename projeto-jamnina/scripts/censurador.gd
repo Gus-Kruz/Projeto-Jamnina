@@ -3,7 +3,7 @@ extends CharacterBody2D
 @export var patrol_path : Path2D
 @onready var anim_state = $AnimatedSprite2D.get("andar1")
 
-var run_speed = 25.0
+var run_speed = 200
 
 enum states {PATROL, CHASE}
 var state = states.PATROL
@@ -28,8 +28,6 @@ func _physics_process(delta):
 			$DetectRadius/Visao.scale.x = -1
 		velocity = position.direction_to(target) * run_speed
 
-	if velocity.length() > 0:
-		anim_state.travel("andar1")
 	move_and_slide()
 
 func choose_action():

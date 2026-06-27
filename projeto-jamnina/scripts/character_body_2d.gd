@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 var SPEED = 500.0
-const JUMP_VELOCITY = -8000.0
+const JUMP_VELOCITY = -800.0
 var dash = false
 var pode
 var dentro
