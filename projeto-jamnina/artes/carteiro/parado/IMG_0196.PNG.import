@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bc2rfqjohpnsi"
-path="res://.godot/imported/IMG_0195.PNG-40f44098c25d54232e3649469d83db3c.ctex"
+uid="uid://dlf2huabsr7ma"
+path="res://.godot/imported/IMG_0196.PNG-c0e25b1ec90e458c97d712371ec2aeec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://artes/andar/IMG_0195.PNG"
-dest_files=["res://.godot/imported/IMG_0195.PNG-40f44098c25d54232e3649469d83db3c.ctex"]
+source_file="res://artes/carteiro/parado/IMG_0196.PNG"
+dest_files=["res://.godot/imported/IMG_0196.PNG-c0e25b1ec90e458c97d712371ec2aeec.ctex"]
 
 [params]
 

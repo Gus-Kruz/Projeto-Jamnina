@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgj6leoqsasec"
-path="res://.godot/imported/IMG_0194.PNG-eb4cc42fce6d8407149c4323fc758a2f.ctex"
+uid="uid://b6rmbwel5uupm"
+path="res://.godot/imported/Ilustração_Sem_Título-1.png-15944cf113e1653e50d69642ea5793f4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://artes/andar/IMG_0194.PNG"
-dest_files=["res://.godot/imported/IMG_0194.PNG-eb4cc42fce6d8407149c4323fc758a2f.ctex"]
+source_file="res://artes/carteiro/pular/Ilustração_Sem_Título-1.png"
+dest_files=["res://.godot/imported/Ilustração_Sem_Título-1.png-15944cf113e1653e50d69642ea5793f4.ctex"]
 
 [params]
 
