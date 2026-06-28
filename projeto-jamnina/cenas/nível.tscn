@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dxxjkmjo0xf5a"]
 
-[ext_resource type="PackedScene" uid="uid://dkxdmdjio26ey" path="res://cenas/censurador.tscn" id="1_2yrcx"]
+[ext_resource type="PackedScene" uid="uid://bdlq2vd2awk4h" path="res://cenas/censurador.tscn" id="1_2yrcx"]
 [ext_resource type="PackedScene" uid="uid://c8rol64plk7le" path="res://cenas/chão.tscn" id="1_ycj3v"]
 [ext_resource type="PackedScene" uid="uid://cith6nwb12npx" path="res://cenas/personagem.tscn" id="2_kn2re"]
 [ext_resource type="PackedScene" uid="uid://v1j86q35s7p" path="res://cenas/barraca.tscn" id="3_kn2re"]
@@ -13,8 +13,9 @@ point_count = 2
 
 [node name="Node2D" type="Node2D" unique_id=1497396039]
 
-[node name="Censurador" parent="." unique_id=1177385418 node_paths=PackedStringArray("patrol_path") instance=ExtResource("1_2yrcx")]
+[node name="censurador" parent="." unique_id=1177385418 node_paths=PackedStringArray("patrol_path") instance=ExtResource("1_2yrcx")]
 position = Vector2(1076, 893)
+sprite_number = 2
 patrol_path = NodePath("../path_patrol")
 
 [node name="Node2D" parent="." unique_id=1769249425 instance=ExtResource("1_ycj3v")]
