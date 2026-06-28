@@ -29,6 +29,7 @@ position = Vector2(294, 746)
 z_index = -1
 position = Vector2(686.99994, 825.00006)
 scale = Vector2(2, 2)
+cor = Color(0.24401078, 0.5913267, 0.64436626, 1)
 
 [node name="path_patrol" type="Path2D" parent="." unique_id=142645807]
 curve = SubResource("Curve2D_2yrcx")
