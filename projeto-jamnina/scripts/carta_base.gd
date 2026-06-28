@@ -85,8 +85,15 @@ func verificar_vitoria() -> void:
 			
 	if tudo_certo and slots.size() > 0:
 		$TextoVitoria.show()
-		var tween = create_tween()
-		tween.tween_property($TextoVitoria, "scale", Vector2(1.2, 1.2), 0.3).set_trans(Tween.TRANS_BOUNCE)
-		tween.tween_property($TextoVitoria, "scale", Vector2(1.0, 1.0), 0.3)
+		$TextoVitoria.scale = Vector2.ZERO
+		$TextoVitoria.pivot_offset = $TextoVitoria.size / 2
+	
+		var tween = create_tween().set_parallel(false)
+		tween.tween_property($TextoVitoria, "scale", Vector2(1.2, 1.2), 0.25)\
+			.set_trans(Tween.TRANS_BACK)\
+			.set_ease(Tween.EASE_OUT)
+		tween.tween_property($TextoVitoria, "scale", Vector2(1.0, 1.0), 0.15)\
+			.set_trans(Tween.TRANS_SINE)\
+			.set_ease(Tween.EASE_IN_OUT)
 	else:
 		$TextoVitoria.hide()
