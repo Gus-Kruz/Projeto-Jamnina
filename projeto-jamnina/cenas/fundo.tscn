@@ -20,7 +20,7 @@ sources/0 = SubResource("TileSetAtlasSource_3m1db")
 size = Vector2(64, 800)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rq0oe"]
-size = Vector2(2849.5, 23)
+size = Vector2(2849.5, 10)
 
 [node name="Fundo" type="Node2D" unique_id=1542186277]
 
@@ -39,5 +39,5 @@ position = Vector2(2800, 400)
 shape = SubResource("RectangleShape2D_3m1db")
 
 [node name="chao" type="CollisionShape2D" parent="StaticBody2D" unique_id=848765846]
-position = Vector2(1394.75, 811.5)
+position = Vector2(1394.75, 818)
 shape = SubResource("RectangleShape2D_rq0oe")
