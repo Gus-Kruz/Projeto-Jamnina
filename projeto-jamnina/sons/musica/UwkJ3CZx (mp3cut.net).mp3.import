@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cw6jdsb370f81"
+path="res://.godot/imported/UwkJ3CZx (mp3cut.net).mp3-ef503cb958cf6a84b42e40555ab41961.mp3str"
+
+[deps]
+
+source_file="res://sons/musica/UwkJ3CZx (mp3cut.net).mp3"
+dest_files=["res://.godot/imported/UwkJ3CZx (mp3cut.net).mp3-ef503cb958cf6a84b42e40555ab41961.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

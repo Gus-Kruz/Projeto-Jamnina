@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://flagns0cbemg"]
+
+[ext_resource type="Texture2D" uid="uid://dywchcqj40oq5" path="res://sprites/cenarios/poste.png" id="1_wojhq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fya1x"]
+size = Vector2(240, 20)
+
+[node name="Node2D" type="Node2D" unique_id=617412226]
+scale = Vector2(2, 2)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1468436942]
+texture = ExtResource("1_wojhq")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1001654133]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1872323207]
+position = Vector2(0, -133)
+shape = SubResource("RectangleShape2D_fya1x")
+one_way_collision = true
