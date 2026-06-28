@@ -10,7 +10,6 @@ var slots: Array[SlotCarta] = []
 var pecas: Array[PedacoCarta] = []
 
 func _ready() -> void:
-	# Efeito de Fade-in (Transição suave)
 	modulate.a = 0.0
 	var tween = create_tween()
 	tween.tween_property(self, "modulate:a", 1.0, 1.0)
@@ -19,7 +18,6 @@ func _ready() -> void:
 		iniciar_puzzle(frase_alvo)
 
 func iniciar_puzzle(palavras: Array[String]) -> void:
-	# Limpa filhos anteriores
 	for child in $SlotsContainer.get_children():
 		child.queue_free()
 	for child in $PecasIniciais.get_children():
@@ -28,30 +26,25 @@ func iniciar_puzzle(palavras: Array[String]) -> void:
 	slots.clear()
 	pecas.clear()
 	
-	# Cria os slots na ordem correta
 	for palavra in palavras:
 		var slot = slot_scene.instantiate() as SlotCarta
 		slot.id_palavra_esperada = palavra
 		$SlotsContainer.add_child(slot)
 		slots.append(slot)
-		
-	# Esperar 1 frame para o HBoxContainer organizar as posições reais dos slots
+
 	await get_tree().process_frame
-		
-	# Prepara palavras
+
 	var palavras_iniciais = frase_inicial.duplicate()
 	if palavras_iniciais.size() != palavras.size():
 		palavras_iniciais = palavras.duplicate()
 		palavras_iniciais.shuffle()
-	
-	# Cria as peças e coloca nos slots iniciais
+
 	for i in range(palavras_iniciais.size()):
 		var palavra = palavras_iniciais[i]
 		var pedaco = pedaco_scene.instantiate() as PedacoCarta
 		$PecasIniciais.add_child(pedaco)
 		pedaco.set_texto(palavra)
-		
-		# Posiciona diretamente no slot correspondente da ordem inicial
+
 		if i < slots.size():
 			pedaco.global_position = slots[i].global_position
 			slots[i].pedaco_encaixado = pedaco
@@ -63,24 +56,20 @@ func iniciar_puzzle(palavras: Array[String]) -> void:
 
 func _on_pedaco_solto(pedaco: PedacoCarta) -> void:
 	var snap_distance = 50.0
-	
-	# Limpa do slot anterior se estivesse
+
 	for s in slots:
 		if s.pedaco_encaixado == pedaco:
 			s.pedaco_encaixado = null
-	
-	# Verifica se está perto de um slot livre
+
 	for slot in slots:
 		if slot.esta_livre():
 			var dist = pedaco.global_position.distance_to(slot.global_position)
 			if dist < snap_distance:
-				# Efeito visual de encaixe rápido
 				var tween = create_tween()
 				tween.tween_property(pedaco, "global_position", slot.global_position, 0.1)
 				slot.pedaco_encaixado = pedaco
 				break
-				
-	# Se nao colou em slot nenhum, ele só fica caído onde soltou
+
 	verificar_vitoria()
 
 func verificar_vitoria() -> void:
@@ -96,10 +85,8 @@ func verificar_vitoria() -> void:
 			
 	if tudo_certo and slots.size() > 0:
 		$TextoVitoria.show()
-		# Pequena animação de vitória
 		var tween = create_tween()
 		tween.tween_property($TextoVitoria, "scale", Vector2(1.2, 1.2), 0.3).set_trans(Tween.TRANS_BOUNCE)
 		tween.tween_property($TextoVitoria, "scale", Vector2(1.0, 1.0), 0.3)
-		 # get_tree().change_scene_to_file(caminho)
 	else:
 		$TextoVitoria.hide()

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bmfouetmpeefm"
-path="res://.godot/imported/papel_amassado.jpg-985f7ff37925426d090c8b43d04f1172.ctex"
+path="res://.godot/imported/papel_amassado.jpg-39bc41d7df295cbcb6b2fcc8b6648a15.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/papel_amassado.jpg"
-dest_files=["res://.godot/imported/papel_amassado.jpg-985f7ff37925426d090c8b43d04f1172.ctex"]
+source_file="res://artes/puzzle_carta/papel_amassado.jpg"
+dest_files=["res://.godot/imported/papel_amassado.jpg-39bc41d7df295cbcb6b2fcc8b6648a15.ctex"]
 
 [params]
 

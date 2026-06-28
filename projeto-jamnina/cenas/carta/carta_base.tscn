@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dhsjscsi4b5hn"]
 
 [ext_resource type="Script" uid="uid://2746ls0ihc5r" path="res://scripts/carta_base.gd" id="1_carta"]
-[ext_resource type="Texture2D" uid="uid://bmfouetmpeefm" path="res://sprites/papel_amassado.jpg" id="2_epxch"]
+[ext_resource type="Texture2D" uid="uid://bmfouetmpeefm" path="res://artes/puzzle_carta/papel_amassado.jpg" id="2_epxch"]
 [ext_resource type="FontFile" uid="uid://b14d6kqdef1ml" path="res://recursos/Daydream DEMO.otf" id="3_lq8k5"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_epxch"]
