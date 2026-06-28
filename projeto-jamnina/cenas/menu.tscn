@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dgx0e78vdlmfo" path="res://scripts/menu.gd" id="1_qcnrj"]
 [ext_resource type="Texture2D" uid="uid://jad833r7pty2" path="res://artes/menu/1719793.jpg" id="2_qcnrj"]
-[ext_resource type="Texture2D" uid="uid://gynevramkb6x" path="res://artes/menu/Logo.png" id="3_6l0hd"]
+[ext_resource type="Texture2D" uid="uid://bprr6w1ob06x" path="res://artes/Capa.png" id="3_qcnrj"]
 [ext_resource type="Texture2D" uid="uid://c6cp8s4bptnhh" path="res://artes/menu/Jogar.png" id="4_s4mth"]
 [ext_resource type="Texture2D" uid="uid://c67dhcvew6w5i" path="res://artes/menu/Creditos.png" id="6_lvcsh"]
 [ext_resource type="Texture2D" uid="uid://ja8vgkbo2kmh" path="res://artes/menu/Sair.png" id="7_ktxou"]
@@ -17,6 +17,7 @@ offset_bottom = 1080.0
 size_flags_horizontal = 6
 size_flags_vertical = 6
 texture = ExtResource("2_qcnrj")
+expand_mode = 3
 
 [node name="MarginContainer" type="MarginContainer" parent="Fundo" unique_id=2061538021]
 layout_mode = 1
@@ -36,8 +37,10 @@ size_flags_horizontal = 6
 
 [node name="Logo" type="TextureRect" parent="Fundo/MarginContainer/HBoxContainer/VBoxContainer" unique_id=7644447]
 layout_mode = 2
-size_flags_vertical = 2
-texture = ExtResource("3_6l0hd")
+size_flags_vertical = 10
+texture = ExtResource("3_qcnrj")
+expand_mode = 5
+stretch_mode = 3
 
 [node name="MenuOptions" type="VBoxContainer" parent="Fundo/MarginContainer/HBoxContainer/VBoxContainer" unique_id=607450954]
 layout_mode = 2
