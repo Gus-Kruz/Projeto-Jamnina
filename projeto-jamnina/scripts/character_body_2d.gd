@@ -10,7 +10,6 @@ var inside
 
 func _physics_process(delta: float) -> void:
 	if inside:
-		dentro = false
 		if Input.is_action_just_pressed("baixo"):
 			inside = false
 			$AnimatedSprite2D.z_index = 2
@@ -28,6 +27,7 @@ func _physics_process(delta: float) -> void:
 		velocity.y = 0
 		pode = false
 		inside = true
+		dentro = true
 		$AnimatedSprite2D.modulate = Color(0.353, 0.353, 0.353, 1.0)
 		$AnimatedSprite2D.z_index = -1
 	var direcao
@@ -75,7 +75,6 @@ func _on_timer_timeout() -> void:
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group("barracas"):
-		print("teste")
 		dentro = true
 	
 
