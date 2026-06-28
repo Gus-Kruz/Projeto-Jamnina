@@ -35,7 +35,6 @@ scale = Vector2(2, 2)
 cor = Color(0.27021253, 0.56929845, 0.7451093, 1)
 
 [node name="path_patrol" type="Path2D" parent="." unique_id=142645807]
-position = Vector2(4, -23)
 curve = SubResource("Curve2D_2yrcx")
 
 [node name="Node2D" parent="." unique_id=179646166 instance=ExtResource("6_1geqd")]
@@ -88,5 +87,7 @@ position = Vector2(568, 592)
 [node name="Caixa7" parent="." unique_id=1089442832 instance=ExtResource("5_6bpac")]
 position = Vector2(614, 562)
 
+[connection signal="entrou" from="carteiro" to="censurador" method="_on_carteiro_entrou"]
+[connection signal="saiu" from="carteiro" to="censurador" method="_on_carteiro_saiu"]
 [connection signal="entrou" from="Barraca" to="carteiro" method="_on_barraca_entrou"]
 [connection signal="saiu" from="Barraca" to="carteiro" method="_on_barraca_saiu"]

@@ -17,7 +17,7 @@ var target : Vector2 = Vector2.ZERO
 var player : CharacterBody2D = null
 var current_patrol_point : int = 0
 var patrol_points : Array[Vector2] = []
-
+var dentro = false
 var walk_anim : String
 var run_anim : String
 
@@ -44,7 +44,7 @@ func _physics_process(delta: float) -> void:
 	if state == States.CHASE:
 		if player:
 
-			if global_position.distance_to(player.global_position) > chase_distance:
+			if global_position.distance_to(player.global_position) > chase_distance or dentro:
 				player = null
 				state = States.PATROL
 			else:
@@ -57,7 +57,7 @@ func _physics_process(delta: float) -> void:
 		if patrol_points.size() > 0:
 			target = patrol_points[current_patrol_point]
 
-			if global_position.distance_to(target) < 5.0:
+			if global_position.distance_to(target) < 10.0:
 				current_patrol_point = wrapi(current_patrol_point + 1, 0, patrol_points.size())
 				target = patrol_points[current_patrol_point]
 				
@@ -101,3 +101,11 @@ func _on_detect_radius_body_entered(body: Node2D) -> void:
 func _on_pegacao_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Carteiro"):
 		get_tree().reload_current_scene()
+
+
+func _on_carteiro_entrou() -> void:
+	dentro = true
+
+
+func _on_carteiro_saiu() -> void:
+	dentro = false

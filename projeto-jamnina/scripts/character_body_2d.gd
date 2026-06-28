@@ -6,13 +6,15 @@ var dash = false
 var pode
 var dentro
 var inside
-
+signal entrou
+signal saiu
 
 func _physics_process(delta: float) -> void:
 	if inside:
 		if Input.is_action_just_pressed("baixo"):
+			saiu.emit()
 			inside = false
-			$AnimatedSprite2D.z_index = 2
+			$AnimatedSprite2D.z_index = 0
 			$AnimatedSprite2D.modulate = Color(1.0, 1.0, 1.0, 1.0)
 		return
 	if not is_on_floor() and not dash:
@@ -24,6 +26,7 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY
 
 	if Input.is_action_just_pressed("baixo") and dentro and is_on_floor():
+		entrou.emit()
 		velocity.x = 0
 		velocity.y = 0
 		pode = false
