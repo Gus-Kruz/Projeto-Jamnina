@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://bpoak4db1u4yf"]
+
+[ext_resource type="Script" uid="uid://duttwsqkqgdb2" path="res://scripts/creditos.gd" id="1_qjo7q"]
+[ext_resource type="Texture2D" uid="uid://jad833r7pty2" path="res://artes/menu/1719793.jpg" id="2_73jr6"]
+[ext_resource type="FontFile" uid="uid://b14d6kqdef1ml" path="res://recursos/Daydream DEMO.otf" id="3_qjo7q"]
+[ext_resource type="Texture2D" uid="uid://ja8vgkbo2kmh" path="res://artes/menu/Sair.png" id="6_rpw3p"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6o84d"]
+font = ExtResource("3_qjo7q")
+font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_tn3cb"]
+font = ExtResource("3_qjo7q")
+font_size = 40
+
+[node name="Creditos" type="Node2D" unique_id=1588047816]
+script = ExtResource("1_qjo7q")
+
+[node name="Fundo" type="TextureRect" parent="." unique_id=1678797412]
+offset_right = 1920.0
+offset_bottom = 1080.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture = ExtResource("2_73jr6")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="Fundo" unique_id=2061538021]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 120
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 120
+theme_override_constants/margin_bottom = 80
+
+[node name="Creditos" type="Label" parent="Fundo/MarginContainer" unique_id=408773984]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "Creditos"
+label_settings = SubResource("LabelSettings_6o84d")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Fundo/MarginContainer" unique_id=1746041583]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+
+[node name="luis" type="Label" parent="Fundo/MarginContainer/VBoxContainer" unique_id=1566021666]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "passarinho azul"
+label_settings = SubResource("LabelSettings_tn3cb")
+
+[node name="luis2" type="Label" parent="Fundo/MarginContainer/VBoxContainer" unique_id=22529245]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "yujiuau"
+label_settings = SubResource("LabelSettings_tn3cb")
+
+[node name="luis3" type="Label" parent="Fundo/MarginContainer/VBoxContainer" unique_id=1164966646]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "guskruz"
+label_settings = SubResource("LabelSettings_tn3cb")
+
+[node name="MenuOptions" type="VBoxContainer" parent="Fundo/MarginContainer" unique_id=607450954]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+
+[node name="Voltar" type="TextureButton" parent="Fundo/MarginContainer/MenuOptions" unique_id=196834303]
+layout_mode = 2
+texture_normal = ExtResource("6_rpw3p")
+
+[connection signal="pressed" from="Fundo/MarginContainer/MenuOptions/Voltar" to="." method="_on_voltar_pressed"]
