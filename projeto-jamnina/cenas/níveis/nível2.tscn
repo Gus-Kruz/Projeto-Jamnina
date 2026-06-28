@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://dp4nl8qqjsw0v"]
+
+[ext_resource type="PackedScene" uid="uid://df7hli5fxd15g" path="res://cenas/fundo.tscn" id="1_xwexc"]
+[ext_resource type="PackedScene" uid="uid://bdlq2vd2awk4h" path="res://cenas/censurador.tscn" id="2_oolwa"]
+[ext_resource type="PackedScene" uid="uid://cith6nwb12npx" path="res://cenas/personagem.tscn" id="3_e4thi"]
+[ext_resource type="PackedScene" uid="uid://v1j86q35s7p" path="res://cenas/barraca.tscn" id="4_714xk"]
+[ext_resource type="PackedScene" uid="uid://crs1mp07n8kqk" path="res://cenas/macadoamor.tscn" id="5_w24lt"]
+
+[sub_resource type="Curve2D" id="Curve2D_6bpac"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1216, 750, 0, 0, 0, 0, 800, 750)
+}
+point_count = 2
+
+[node name="Node2D" type="Node2D" unique_id=1497396039]
+
+[node name="Fundo" parent="." unique_id=1542186277 instance=ExtResource("1_xwexc")]
+show_behind_parent = true
+z_index = -2
+
+[node name="censurador" parent="." unique_id=1177385418 node_paths=PackedStringArray("patrol_path") instance=ExtResource("2_oolwa")]
+position = Vector2(980, 757)
+patrol_path = NodePath("../path_patrol")
+
+[node name="carteiro" parent="." unique_id=178538168 instance=ExtResource("3_e4thi")]
+position = Vector2(166, 675)
+
+[node name="Barraca3" parent="." unique_id=1769249425 instance=ExtResource("4_714xk")]
+z_index = -1
+position = Vector2(345, 555)
+scale = Vector2(4, 4)
+
+[node name="Barraca2" parent="." unique_id=1150879075 instance=ExtResource("4_714xk")]
+z_index = -1
+position = Vector2(1383, 688)
+scale = Vector2(2, 2)
+
+[node name="path_patrol" type="Path2D" parent="." unique_id=142645807]
+curve = SubResource("Curve2D_6bpac")
+
+[node name="Node2D" parent="." unique_id=179646166 instance=ExtResource("5_w24lt")]
+position = Vector2(793, 605)
+
+[connection signal="entrou" from="Barraca2" to="carteiro" method="_on_barraca_entrou"]
+[connection signal="saiu" from="Barraca2" to="carteiro" method="_on_barraca_saiu"]
