@@ -70,7 +70,6 @@ func _physics_process(delta: float) -> void:
 func move_towards_target(speed: float, anim: String, use_deadzone: bool) -> void:
 	var dist_x = target.x - global_position.x
 	
-	# Se estiver muito próximo horizontalmente e a deadzone estiver ativa, para o movimento
 	if use_deadzone and abs(dist_x) < 10.0:
 		velocity.x = 0
 		animated_sprite.play(anim)
@@ -82,7 +81,6 @@ func move_towards_target(speed: float, anim: String, use_deadzone: bool) -> void
 	animated_sprite.play(anim)
 
 func update_facing(target_pos: Vector2, use_deadzone: bool) -> void:
-	# Só usa a zona morta se use_deadzone estiver ativo (ex: na perseguição)
 	if use_deadzone and abs(target_pos.x - global_position.x) < 10.0:
 		return
 		
