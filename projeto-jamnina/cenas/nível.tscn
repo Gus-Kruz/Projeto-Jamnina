@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dxxjkmjo0xf5a"]
+[gd_scene format=3 uid="uid://dn7x5iwji7r3u"]
 
 [ext_resource type="PackedScene" uid="uid://dkxdmdjio26ey" path="res://cenas/censurador.tscn" id="1_2yrcx"]
 [ext_resource type="PackedScene" uid="uid://df7hli5fxd15g" path="res://cenas/fundo.tscn" id="1_6bpac"]

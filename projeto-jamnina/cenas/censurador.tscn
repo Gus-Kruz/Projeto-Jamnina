@@ -117,9 +117,13 @@ size = Vector2(30, 107)
 size = Vector2(39, 78)
 
 [node name="censurador" type="CharacterBody2D" unique_id=2135449001]
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_16162")
 
 [node name="DetectRadius" type="Area2D" parent="." unique_id=1144528655]
+collision_layer = 2
+collision_mask = 2
 collision_priority = 0.0
 
 [node name="Visao" type="CollisionShape2D" parent="DetectRadius" unique_id=363715788]
@@ -134,7 +138,6 @@ animation = &"correr3"
 [node name="Hitbox" type="CollisionShape2D" parent="." unique_id=57765969]
 position = Vector2(-4, 0.5)
 shape = SubResource("RectangleShape2D_7jxve")
-disabled = true
 
 [node name="PegacaoArea" type="Area2D" parent="." unique_id=1463999697]
 

@@ -23,7 +23,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("5_foddy")
 }],
-"loop": true,
+"loop": 1,
 "name": &"andar",
 "speed": 9.0
 }, {
@@ -31,7 +31,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("2_c6r7t")
 }],
-"loop": true,
+"loop": 1,
 "name": &"parado",
 "speed": 5.0
 }, {
@@ -45,7 +45,7 @@ animations = [{
 "duration": 2.0,
 "texture": ExtResource("6_foddy")
 }],
-"loop": true,
+"loop": 1,
 "name": &"pular",
 "speed": 5.0
 }]
