@@ -1,10 +1,9 @@
 [gd_scene format=3 uid="uid://bpg6h4vg8866b"]
 
 [ext_resource type="Script" uid="uid://dgx0e78vdlmfo" path="res://scripts/menu.gd" id="1_qcnrj"]
-[ext_resource type="Texture2D" path="res://artes/menu/carteiro-correios-1570483827212_v2_1920x1080.jpg" id="2_qygre"]
+[ext_resource type="Texture2D" uid="uid://jad833r7pty2" path="res://artes/menu/1719793.jpg" id="2_qcnrj"]
 [ext_resource type="Texture2D" uid="uid://gynevramkb6x" path="res://artes/menu/Logo.png" id="3_6l0hd"]
 [ext_resource type="Texture2D" uid="uid://c6cp8s4bptnhh" path="res://artes/menu/Jogar.png" id="4_s4mth"]
-[ext_resource type="Texture2D" path="res://artes/menu/Configurar.png" id="5_806vj"]
 [ext_resource type="Texture2D" uid="uid://c67dhcvew6w5i" path="res://artes/menu/Creditos.png" id="6_lvcsh"]
 [ext_resource type="Texture2D" uid="uid://ja8vgkbo2kmh" path="res://artes/menu/Sair.png" id="7_ktxou"]
 [ext_resource type="Texture2D" uid="uid://ci2p6gjr2by74" path="res://artes/menu/Versão.png" id="8_qygre"]
@@ -17,7 +16,7 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 size_flags_horizontal = 6
 size_flags_vertical = 6
-texture = ExtResource("2_qygre")
+texture = ExtResource("2_qcnrj")
 
 [node name="MarginContainer" type="MarginContainer" parent="Fundo" unique_id=2061538021]
 layout_mode = 1
@@ -51,7 +50,6 @@ texture_pressed = ExtResource("4_s4mth")
 
 [node name="Configurar" type="TextureButton" parent="Fundo/MarginContainer/HBoxContainer/VBoxContainer/MenuOptions" unique_id=188795215]
 layout_mode = 2
-texture_normal = ExtResource("5_806vj")
 
 [node name="Creditos" type="TextureButton" parent="Fundo/MarginContainer/HBoxContainer/VBoxContainer/MenuOptions" unique_id=188340360]
 layout_mode = 2
