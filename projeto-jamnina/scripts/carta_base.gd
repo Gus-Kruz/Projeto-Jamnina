@@ -4,6 +4,7 @@ const TRANSICAO =  preload("res://cenas/menu/transicao.tscn")
 
 @export var frase_alvo: Array[String] = []
 @export var frase_inicial: Array[String] = []
+@export var proxima_fase: String
 
 var pedaco_scene = preload("res://cenas/carta/pedaco_carta.tscn")
 var slot_scene = preload("res://cenas/carta/slot_carta.tscn")
@@ -104,6 +105,6 @@ func verificar_vitoria() -> void:
 		fade.play('fade')
 		await fade.animation_finished
 		await get_tree().create_timer(2).timeout
-		# get_tree().change_scene_to_file("caminho")
+		get_tree().change_scene_to_file("res://cenas/níveis/nível" + "proxima_fase"+".tscn")
 	else:
 		$TextoVitoria.hide()

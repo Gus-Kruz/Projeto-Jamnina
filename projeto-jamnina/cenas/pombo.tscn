@@ -77,7 +77,6 @@ position = Vector2(-3.5, -31)
 shape = SubResource("RectangleShape2D_apk3l")
 
 [node name="Label" type="Label" parent="." unique_id=734214499]
-visible = false
 offset_left = -67.0
 offset_top = -84.0
 offset_right = 64.0
@@ -85,8 +84,7 @@ offset_bottom = -71.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("10_afw54")
 theme_override_font_sizes/font_size = 7
-text = "entregue a carta"
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
