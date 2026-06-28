@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://5hipycajjym0"]
 
 [ext_resource type="Texture2D" uid="uid://hshnl1236ql2" path="res://artes/pombo/Ilustração_Sem_Título-1.png" id="1_7wfam"]
+[ext_resource type="Script" uid="uid://e8kc5khs7lgv" path="res://scripts/pombo.gd" id="1_orcdd"]
 [ext_resource type="Texture2D" uid="uid://c04tw3nw4bfsg" path="res://artes/pombo/Ilustração_Sem_Título-2.png" id="2_yvo7f"]
 [ext_resource type="Texture2D" uid="uid://cnolefcqa1ywu" path="res://artes/pombo/Ilustração_Sem_Título-3.png" id="3_orcdd"]
 [ext_resource type="Texture2D" uid="uid://be7hyyqmfseh" path="res://artes/pombo/Ilustração_Sem_Título-4.png" id="4_afw54"]
@@ -8,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cw8g4csihrjmt" path="res://artes/pombo/Ilustração_Sem_Título-6.png" id="6_846vc"]
 [ext_resource type="Texture2D" uid="uid://bw4txv1onxrgw" path="res://artes/pombo/Ilustração_Sem_Título-8.png" id="7_upxlx"]
 [ext_resource type="Texture2D" uid="uid://yeuwd5snniyv" path="res://artes/pombo/Ilustração_Sem_Título-7.png" id="8_w5h04"]
+[ext_resource type="FontFile" uid="uid://b14d6kqdef1ml" path="res://recursos/Daydream DEMO.otf" id="10_afw54"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3qiwm"]
 animations = [{
@@ -56,9 +58,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_apk3l"]
-size = Vector2(108, 48)
+size = Vector2(133, 48)
 
-[node name="Pombo" type="CharacterBody2D" unique_id=422309689]
+[node name="Pombo" type="Node2D" unique_id=210578512]
+script = ExtResource("1_orcdd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=701523270]
 position = Vector2(0, -43)
@@ -67,6 +70,23 @@ sprite_frames = SubResource("SpriteFrames_3qiwm")
 animation = &"parado"
 frame_progress = 0.27785808
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2041067978]
-position = Vector2(0, -31)
+[node name="Area2D" type="Area2D" parent="." unique_id=460508097]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2041067978]
+position = Vector2(-3.5, -31)
 shape = SubResource("RectangleShape2D_apk3l")
+
+[node name="Label" type="Label" parent="." unique_id=734214499]
+visible = false
+offset_left = -67.0
+offset_top = -84.0
+offset_right = 64.0
+offset_bottom = -71.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("10_afw54")
+theme_override_font_sizes/font_size = 7
+text = "entregue a carta"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
