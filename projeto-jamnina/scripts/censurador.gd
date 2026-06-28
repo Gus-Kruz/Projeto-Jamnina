@@ -57,7 +57,7 @@ func _physics_process(delta: float) -> void:
 		if patrol_points.size() > 0:
 			target = patrol_points[current_patrol_point]
 
-			if global_position.distance_to(target) < 5.0:
+			if global_position.distance_to(target) < 10.0:
 				current_patrol_point = wrapi(current_patrol_point + 1, 0, patrol_points.size())
 				target = patrol_points[current_patrol_point]
 				

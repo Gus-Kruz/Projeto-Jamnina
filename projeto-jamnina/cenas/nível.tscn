@@ -6,9 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://v1j86q35s7p" path="res://cenas/barraca.tscn" id="3_kn2re"]
 [ext_resource type="PackedScene" uid="uid://crs1mp07n8kqk" path="res://cenas/macadoamor.tscn" id="6_1geqd"]
 
-[sub_resource type="Curve2D" id="Curve2D_2yrcx"]
+[sub_resource type="Curve2D" id="Curve2D_6bpac"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 1282, 750, 0, 0, 0, 0, 950, 750)
+"points": PackedVector2Array(0, 0, 0, 0, 1216, 750, 0, 0, 0, 0, 800, 750)
 }
 point_count = 2
 
@@ -19,7 +19,7 @@ show_behind_parent = true
 z_index = -2
 
 [node name="censurador" parent="." unique_id=1177385418 node_paths=PackedStringArray("patrol_path") instance=ExtResource("1_2yrcx")]
-position = Vector2(1096, 741)
+position = Vector2(960, 726)
 patrol_path = NodePath("../path_patrol")
 
 [node name="carteiro" parent="." unique_id=178538168 instance=ExtResource("2_kn2re")]
@@ -31,7 +31,7 @@ position = Vector2(682, 674)
 scale = Vector2(2, 2)
 
 [node name="path_patrol" type="Path2D" parent="." unique_id=142645807]
-curve = SubResource("Curve2D_2yrcx")
+curve = SubResource("Curve2D_6bpac")
 
 [node name="Node2D" parent="." unique_id=179646166 instance=ExtResource("6_1geqd")]
 position = Vector2(578, 536)
