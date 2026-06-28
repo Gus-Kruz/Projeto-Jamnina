@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://df7hli5fxd15g" path="res://cenas/fundo.tscn" id="1_6bpac"]
 [ext_resource type="PackedScene" uid="uid://cith6nwb12npx" path="res://cenas/personagem.tscn" id="2_kn2re"]
 [ext_resource type="PackedScene" uid="uid://v1j86q35s7p" path="res://cenas/barraca.tscn" id="3_kn2re"]
+[ext_resource type="PackedScene" uid="uid://crs1mp07n8kqk" path="res://cenas/macadoamor.tscn" id="6_1geqd"]
 
 [sub_resource type="Curve2D" id="Curve2D_2yrcx"]
 _data = {
@@ -32,6 +33,9 @@ scale = Vector2(2, 2)
 
 [node name="path_patrol" type="Path2D" parent="." unique_id=142645807]
 curve = SubResource("Curve2D_2yrcx")
+
+[node name="Node2D" parent="." unique_id=179646166 instance=ExtResource("6_1geqd")]
+position = Vector2(578, 536)
 
 [connection signal="entrou" from="Barraca" to="carteiro" method="_on_barraca_entrou"]
 [connection signal="saiu" from="Barraca" to="carteiro" method="_on_barraca_saiu"]

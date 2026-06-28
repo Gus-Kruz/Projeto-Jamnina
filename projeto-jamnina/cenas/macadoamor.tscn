@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://crs1mp07n8kqk"]
 
+[ext_resource type="Script" uid="uid://bthne6ch4v43d" path="res://scripts/macadoamor.gd" id="1_p6sju"]
 [ext_resource type="Texture2D" uid="uid://yfyynbq6ku0p" path="res://sprites/cenarios/Pixelart-381-maturi46.png" id="1_sd87s"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sd87s"]
@@ -7,6 +8,7 @@ radius = 14.0
 height = 56.0
 
 [node name="Node2D" type="Node2D" unique_id=179646166]
+script = ExtResource("1_p6sju")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=16913785]
 scale = Vector2(0.063, 0.063)
@@ -16,3 +18,5 @@ texture = ExtResource("1_sd87s")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=270286260]
 shape = SubResource("CapsuleShape2D_sd87s")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
