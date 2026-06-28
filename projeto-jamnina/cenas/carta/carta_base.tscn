@@ -17,8 +17,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_carta")
-frase_alvo = Array[String](["comia", "a", "esposa"])
-frase_inicial = Array[String](["a", "esposa", "comia"])
+frase_alvo = Array[String](["comia", "a", "esposa", ""])
+frase_inicial = Array[String](["a", "esposa", "comia", "abobrinha"])
 
 [node name="Fundo" type="TextureRect" parent="." unique_id=1192648343]
 layout_mode = 1
