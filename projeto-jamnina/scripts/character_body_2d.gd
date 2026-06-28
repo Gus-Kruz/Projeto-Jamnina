@@ -14,7 +14,7 @@ func _physics_process(delta: float) -> void:
 		if Input.is_action_just_pressed("baixo"):
 			saiu.emit()
 			inside = false
-			$AnimatedSprite2D.z_index = 0
+			$AnimatedSprite2D.z_index = 2
 			$AnimatedSprite2D.modulate = Color(1.0, 1.0, 1.0, 1.0)
 		return
 	if not is_on_floor() and not dash:
@@ -33,7 +33,7 @@ func _physics_process(delta: float) -> void:
 		inside = true
 		dentro = true
 		$AnimatedSprite2D.modulate = Color(0.353, 0.353, 0.353, 1.0)
-		$AnimatedSprite2D.z_index = -1
+		$AnimatedSprite2D.z_index = -2
 	var direcao
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
