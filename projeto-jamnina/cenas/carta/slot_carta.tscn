@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://ceybjujgjv1mt"]
+
+[ext_resource type="Script" path="res://scripts/slot_carta.gd" id="1_slot"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_slot"]
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 0.35)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+corner_detail = 8
+
+[node name="SlotCarta" type="PanelContainer"]
+custom_minimum_size = Vector2(160, 60)
+offset_right = 160.0
+offset_bottom = 60.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_slot")
+script = ExtResource("1_slot")

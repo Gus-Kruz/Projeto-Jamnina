@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dxxjkmjo0xf5a"]
 
-[ext_resource type="PackedScene" uid="uid://bdlq2vd2awk4h" path="res://cenas/censurador.tscn" id="1_2yrcx"]
-[ext_resource type="PackedScene" uid="uid://c8rol64plk7le" path="res://cenas/chão.tscn" id="1_ycj3v"]
+[ext_resource type="PackedScene" uid="uid://dkxdmdjio26ey" path="res://cenas/censurador.tscn" id="1_2yrcx"]
+[ext_resource type="PackedScene" uid="uid://df7hli5fxd15g" path="res://cenas/fundo.tscn" id="1_6bpac"]
 [ext_resource type="PackedScene" uid="uid://cith6nwb12npx" path="res://cenas/personagem.tscn" id="2_kn2re"]
 [ext_resource type="PackedScene" uid="uid://v1j86q35s7p" path="res://cenas/barraca.tscn" id="3_kn2re"]
 
@@ -13,23 +13,22 @@ point_count = 2
 
 [node name="Node2D" type="Node2D" unique_id=1497396039]
 
+[node name="Fundo" parent="." unique_id=1542186277 instance=ExtResource("1_6bpac")]
+show_behind_parent = true
+z_index = -2
+
 [node name="censurador" parent="." unique_id=1177385418 node_paths=PackedStringArray("patrol_path") instance=ExtResource("1_2yrcx")]
-position = Vector2(1076, 893)
+position = Vector2(1065, 762)
 sprite_number = 2
 patrol_path = NodePath("../path_patrol")
 
-[node name="Node2D" parent="." unique_id=1769249425 instance=ExtResource("1_ycj3v")]
-position = Vector2(644, 1014)
-scale = Vector2(10, 1)
-
 [node name="carteiro" parent="." unique_id=178538168 instance=ExtResource("2_kn2re")]
-position = Vector2(294, 746)
+position = Vector2(292, 541)
 
 [node name="Barraca" parent="." unique_id=940644642 instance=ExtResource("3_kn2re")]
 z_index = -1
-position = Vector2(686.99994, 825.00006)
+position = Vector2(682, 674)
 scale = Vector2(2, 2)
-cor = Color(0.24401078, 0.5913267, 0.64436626, 1)
 
 [node name="path_patrol" type="Path2D" parent="." unique_id=142645807]
 curve = SubResource("Curve2D_2yrcx")

@@ -138,7 +138,6 @@ shape = SubResource("RectangleShape2D_7jxve")
 [node name="PegacaoArea" type="Area2D" parent="." unique_id=1463999697]
 
 [node name="Alcance" type="CollisionShape2D" parent="PegacaoArea" unique_id=858231144]
-top_level = true
 shape = SubResource("RectangleShape2D_tn3cb")
 
 [connection signal="body_entered" from="DetectRadius" to="." method="_on_detect_radius_body_entered"]

@@ -71,6 +71,7 @@ texture = ExtResource("2_c6r7t")
 wait_time = 0.1
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=708140231]
+offset = Vector2(400, -200)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2071489530]
 z_index = 2

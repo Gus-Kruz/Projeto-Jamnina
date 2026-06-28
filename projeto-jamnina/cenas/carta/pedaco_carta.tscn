@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://csax7nkyf1t0o"]
+
+[ext_resource type="Script" uid="uid://ri028vl6v60a" path="res://scripts/pedaco_carta.gd" id="1_pedaco"]
+[ext_resource type="FontFile" uid="uid://b14d6kqdef1ml" path="res://recursos/Daydream DEMO.otf" id="2_xvpu2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pedaco"]
+bg_color = Color(0.96, 0.94, 0.88, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.85, 0.8, 0.72, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+shadow_color = Color(0, 0, 0, 0.3)
+shadow_size = 5
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="LabelSettings" id="LabelSettings_lq8k5"]
+font = ExtResource("2_xvpu2")
+font_color = Color(0, 0, 0, 1)
+
+[node name="PedacoCarta" type="PanelContainer" unique_id=1768053979]
+custom_minimum_size = Vector2(160, 60)
+offset_right = 160.0
+offset_bottom = 60.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_pedaco")
+script = ExtResource("1_pedaco")
+
+[node name="Label" type="Label" parent="." unique_id=1871342964]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.18, 0.12, 0.06, 1)
+text = "Texto"
+label_settings = SubResource("LabelSettings_lq8k5")
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,5 +1,6 @@
 extends Node2D
 
+const TRANSICAO =  preload("res://cenas/menu/transicao.tscn")
 const CARTA_TEXTURE = preload("res://artes/menu/Carta.png")
 const QTD_CARTAS = 20
 
@@ -20,8 +21,16 @@ var time_elapsed : float = 0.0
 	button_sair
 ]
 
+func transicao(caminho: String):
+	var transicao = TRANSICAO.instantiate()
+	add_child(transicao)
+	var fade = transicao.get_node("fade")
+	fade.play('fade')
+	await fade.animation_finished
+	get_tree().change_scene_to_file(caminho)
+
 func _ready() -> void:
-	# Cria o container de cartas como um Control
+
 	cartas_container = Control.new()
 	cartas_container.name = "CartasContainer"
 	cartas_container.anchors_preset = Control.PRESET_FULL_RECT
@@ -143,17 +152,16 @@ func _on_button_unhover(button: TextureButton) -> void:
 
 	tween.tween_property(button, "modulate", Color(1.0, 1.0, 1.0), 0.15)
 
-func _on_configurar_pressed() -> void:
-	# get_tree().change_scene_to_file(configurações)
-	pass
-
 func _on_creditos_pressed() -> void:
-	# get_tree().change_scene_to_file(creditos)
-	pass
+	transicao("res://cenas/menu/creditos.tscn")
 
 func _on_jogar_pressed() -> void:
-	# get_tree().change_scene_to_file(jogar)
-	pass
+	transicao("res://cenas/nível.tscn")
 	
 func _on_sair_pressed() -> void:
+	var transicao = TRANSICAO.instantiate()
+	add_child(transicao)
+	var fade = transicao.get_node("fade")
+	fade.play('fade')
+	await fade.animation_finished
 	get_tree().quit()

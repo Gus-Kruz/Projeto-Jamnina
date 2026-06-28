@@ -7,6 +7,7 @@ var pode
 var dentro
 var inside
 
+
 func _physics_process(delta: float) -> void:
 	if inside:
 		dentro = false
@@ -22,8 +23,6 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("cima") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
-	if is_on_floor():
-		pode = true
 	if Input.is_action_just_pressed("baixo") and dentro and is_on_floor():
 		velocity.x = 0
 		velocity.y = 0
@@ -45,18 +44,7 @@ func _physics_process(delta: float) -> void:
 		else:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 	
-	if not is_on_floor() == true:
-		$AnimatedSprite2D.play('pular')
-	elif direcao == "direita":
-		$AnimatedSprite2D.flip_h = false 
-		$AnimatedSprite2D.play('andar')
-	elif direcao == "esquerda":
-		$AnimatedSprite2D.flip_h = true 
-		$AnimatedSprite2D.play('andar')
-	else:
-		$AnimatedSprite2D.play('parado')
-		
-	if Input.is_action_just_pressed("dash") and pode:
+	if Input.is_action_just_pressed("dash") and is_on_floor():
 			$Timer.start()
 			pode = false
 			dash = true
@@ -67,6 +55,16 @@ func _physics_process(delta: float) -> void:
 			elif direcao == "esquerda":
 				velocity.x = -SPEED
 	
+	if not is_on_floor() == true:
+		$AnimatedSprite2D.play('pular')
+	elif direcao == "direita":
+		$AnimatedSprite2D.flip_h = false 
+		$AnimatedSprite2D.play('andar')
+	elif direcao == "esquerda":
+		$AnimatedSprite2D.flip_h = true 
+		$AnimatedSprite2D.play('andar')
+	else:
+		$AnimatedSprite2D.play('parado')
 	move_and_slide()
 
 
