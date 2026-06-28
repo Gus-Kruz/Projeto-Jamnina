@@ -5,6 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://cith6nwb12npx" path="res://cenas/personagem.tscn" id="3_e4thi"]
 [ext_resource type="PackedScene" uid="uid://v1j86q35s7p" path="res://cenas/barraca.tscn" id="4_714xk"]
 [ext_resource type="PackedScene" uid="uid://crs1mp07n8kqk" path="res://cenas/macadoamor.tscn" id="5_w24lt"]
+[ext_resource type="PackedScene" uid="uid://bo7ap1ep1jien" path="res://cenas/poste2.tscn" id="6_714xk"]
+[ext_resource type="PackedScene" uid="uid://dw6t8u5rioj4n" path="res://cenas/poste3.tscn" id="7_w24lt"]
+[ext_resource type="PackedScene" uid="uid://cl2bjalmnbsvy" path="res://cenas/caixa.tscn" id="8_t7blp"]
 
 [sub_resource type="Curve2D" id="Curve2D_6bpac"]
 _data = {
@@ -23,23 +26,69 @@ position = Vector2(980, 757)
 patrol_path = NodePath("../path_patrol")
 
 [node name="carteiro" parent="." unique_id=178538168 instance=ExtResource("3_e4thi")]
-position = Vector2(166, 675)
+position = Vector2(97, 749)
 
 [node name="Barraca3" parent="." unique_id=1769249425 instance=ExtResource("4_714xk")]
 z_index = -1
-position = Vector2(345, 555)
-scale = Vector2(4, 4)
+position = Vector2(180, 688)
+scale = Vector2(2, 2)
+cor = Color(1, 0.2509804, 1, 1)
 
 [node name="Barraca2" parent="." unique_id=1150879075 instance=ExtResource("4_714xk")]
 z_index = -1
+position = Vector2(489, 688)
+scale = Vector2(2, 2)
+cor = Color(0.07450981, 1, 0.2627451, 1)
+
+[node name="Barraca4" parent="." unique_id=1891426322 instance=ExtResource("4_714xk")]
+z_index = -1
+position = Vector2(790, 688)
+scale = Vector2(2, 2)
+cor = Color(0.2509804, 0.5921569, 1, 1)
+
+[node name="Barraca5" parent="." unique_id=310858215 instance=ExtResource("4_714xk")]
+z_index = -1
+position = Vector2(1089, 688)
+scale = Vector2(2, 2)
+
+[node name="Barraca6" parent="." unique_id=2120824043 instance=ExtResource("4_714xk")]
+z_index = -1
 position = Vector2(1383, 688)
+scale = Vector2(2, 2)
+
+[node name="Barraca7" parent="." unique_id=1096305546 instance=ExtResource("4_714xk")]
+z_index = -1
+position = Vector2(1673, 688)
+scale = Vector2(2, 2)
+
+[node name="Barraca8" parent="." unique_id=1366369254 instance=ExtResource("4_714xk")]
+z_index = -1
+position = Vector2(1960, 688)
+scale = Vector2(2, 2)
+
+[node name="Barraca9" parent="." unique_id=527924249 instance=ExtResource("4_714xk")]
+z_index = -1
+position = Vector2(2255, 688)
 scale = Vector2(2, 2)
 
 [node name="path_patrol" type="Path2D" parent="." unique_id=142645807]
 curve = SubResource("Curve2D_6bpac")
 
 [node name="Node2D" parent="." unique_id=179646166 instance=ExtResource("5_w24lt")]
-position = Vector2(793, 605)
+position = Vector2(1429, 740)
 
+[node name="Node2D2" parent="." unique_id=617412226 instance=ExtResource("6_714xk")]
+z_index = -4
+position = Vector2(65, 600)
+
+[node name="Node2D3" parent="." unique_id=1922681403 instance=ExtResource("7_w24lt")]
+z_index = -4
+position = Vector2(545, 600)
+
+[node name="Node2D4" parent="." unique_id=554516880 instance=ExtResource("8_t7blp")]
+position = Vector2(2467, 781)
+
+[connection signal="entrou" from="carteiro" to="censurador" method="_on_carteiro_entrou"]
+[connection signal="saiu" from="carteiro" to="censurador" method="_on_carteiro_saiu"]
 [connection signal="entrou" from="Barraca2" to="carteiro" method="_on_barraca_entrou"]
 [connection signal="saiu" from="Barraca2" to="carteiro" method="_on_barraca_saiu"]

@@ -99,7 +99,7 @@ func _on_detect_radius_body_entered(body: Node2D) -> void:
 		state = States.CHASE
 
 func _on_pegacao_area_body_entered(body: Node2D) -> void:
-	if body.is_in_group("Carteiro"):
+	if body.is_in_group("Carteiro") and not dentro:
 		get_tree().reload_current_scene()
 
 
