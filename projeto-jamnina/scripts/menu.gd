@@ -153,7 +153,7 @@ func _on_button_unhover(button: TextureButton) -> void:
 	tween.tween_property(button, "modulate", Color(1.0, 1.0, 1.0), 0.15)
 
 func _on_creditos_pressed() -> void:
-	transicao("res://cenas/menu/creditos.tscn")
+	transicao("res://cenas/menu/creditos2.tscn")
 
 func _on_jogar_pressed() -> void:
 	transicao("res://cenas/nível.tscn")

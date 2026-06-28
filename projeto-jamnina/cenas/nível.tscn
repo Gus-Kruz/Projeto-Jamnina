@@ -20,7 +20,6 @@ z_index = -2
 
 [node name="censurador" parent="." unique_id=1177385418 node_paths=PackedStringArray("patrol_path") instance=ExtResource("1_2yrcx")]
 position = Vector2(1096, 741)
-sprite_number = 2
 patrol_path = NodePath("../path_patrol")
 
 [node name="carteiro" parent="." unique_id=178538168 instance=ExtResource("2_kn2re")]
