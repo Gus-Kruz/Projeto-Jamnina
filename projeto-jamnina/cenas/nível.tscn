@@ -7,7 +7,7 @@
 
 [sub_resource type="Curve2D" id="Curve2D_2yrcx"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 1163, 893, 1, 0, 0, 0, 996, 893)
+"points": PackedVector2Array(0, 0, 0, 0, 1282, 750, 0, 0, 0, 0, 950, 750)
 }
 point_count = 2
 
@@ -18,7 +18,7 @@ show_behind_parent = true
 z_index = -2
 
 [node name="censurador" parent="." unique_id=1177385418 node_paths=PackedStringArray("patrol_path") instance=ExtResource("1_2yrcx")]
-position = Vector2(1069, 742)
+position = Vector2(1096, 741)
 sprite_number = 2
 patrol_path = NodePath("../path_patrol")
 
