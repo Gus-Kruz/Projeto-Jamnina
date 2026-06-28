@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dewed3huwrh04" path="res://artes/carteiro/pular/Ilustração_Sem_Título-2.png" id="7_3o8vf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_foddy"]
-size = Vector2(35, 112)
+size = Vector2(19, 112)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3o8vf"]
 animations = [{
