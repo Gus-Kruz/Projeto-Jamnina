@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://b6rmbwel5uupm" path="res://artes/carteiro/pular/Ilustração_Sem_Título-1.png" id="6_foddy"]
 [ext_resource type="Texture2D" uid="uid://dewed3huwrh04" path="res://artes/carteiro/pular/Ilustração_Sem_Título-2.png" id="7_3o8vf"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tyg5f"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_foddy"]
 size = Vector2(35, 112)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3o8vf"]
@@ -23,7 +23,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("5_foddy")
 }],
-"loop": 1,
+"loop": true,
 "name": &"andar",
 "speed": 9.0
 }, {
@@ -31,7 +31,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("2_c6r7t")
 }],
-"loop": 1,
+"loop": true,
 "name": &"parado",
 "speed": 5.0
 }, {
@@ -45,22 +45,27 @@ animations = [{
 "duration": 2.0,
 "texture": ExtResource("6_foddy")
 }],
-"loop": 1,
+"loop": true,
 "name": &"pular",
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tyg5f"]
+size = Vector2(35, 112)
+
 [node name="carteiro" type="CharacterBody2D" unique_id=1227779810 groups=["Carteiro"]]
 script = ExtResource("2_fgfoh")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1881311006]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1411724335]
+position = Vector2(-6.5, 0)
+shape = SubResource("RectangleShape2D_foddy")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=543072039]
 visible = false
 scale = Vector2(0.5, 1)
 texture = ExtResource("2_c6r7t")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1474937378 groups=["Carteiro"]]
-position = Vector2(-6.5, 0)
-shape = SubResource("RectangleShape2D_tyg5f")
 
 [node name="Timer" type="Timer" parent="." unique_id=245916974]
 wait_time = 0.1
@@ -73,4 +78,10 @@ scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_3o8vf")
 animation = &"parado"
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1474937378 groups=["Carteiro"]]
+position = Vector2(-6.5, 0)
+shape = SubResource("RectangleShape2D_tyg5f")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

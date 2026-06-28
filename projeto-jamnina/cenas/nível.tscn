@@ -33,5 +33,7 @@ scale = Vector2(2, 2)
 [node name="path_patrol" type="Path2D" parent="." unique_id=142645807]
 curve = SubResource("Curve2D_2yrcx")
 
-[connection signal="entrou" from="Barraca" to="carteiro" method="_on_barraca_entrou"]
-[connection signal="saiu" from="Barraca" to="carteiro" method="_on_barraca_saiu"]
+[node name="Barraca2" parent="." unique_id=583231122 instance=ExtResource("3_kn2re")]
+z_index = -1
+position = Vector2(354, 825)
+scale = Vector2(2, 2)

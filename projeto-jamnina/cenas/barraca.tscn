@@ -10,7 +10,7 @@ size = Vector2(140, 4)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_prgk0"]
 size = Vector2(20, 62)
 
-[node name="Node2D" type="Node2D" unique_id=1769249425]
+[node name="Node2D" type="Node2D" unique_id=1769249425 groups=["barracas"]]
 script = ExtResource("1_prgk0")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1548363005]
@@ -26,14 +26,11 @@ region_rect = Rect2(0, 10.49424, 140, 114.50576)
 position = Vector2(0, -30)
 shape = SubResource("RectangleShape2D_yc0wi")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=335995680]
+[node name="Area2D" type="Area2D" parent="." unique_id=335995680 groups=["barracas"]]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1385186571]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1385186571 groups=["barracas"]]
 position = Vector2(0, 31)
 shape = SubResource("RectangleShape2D_prgk0")
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=574755429]
 texture = ExtResource("3_co5bk")
-
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
