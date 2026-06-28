@@ -1,0 +1,205 @@
+[gd_scene format=3 uid="uid://pdlncy8s6vfx"]
+
+[ext_resource type="PackedScene" uid="uid://df7hli5fxd15g" path="res://cenas/fundo.tscn" id="1_axhim"]
+[ext_resource type="PackedScene" uid="uid://bdlq2vd2awk4h" path="res://cenas/censurador.tscn" id="2_nhal8"]
+[ext_resource type="PackedScene" uid="uid://cith6nwb12npx" path="res://cenas/personagem.tscn" id="3_0rtfx"]
+[ext_resource type="PackedScene" uid="uid://crs1mp07n8kqk" path="res://cenas/macadoamor.tscn" id="4_geyy0"]
+[ext_resource type="PackedScene" uid="uid://cl2bjalmnbsvy" path="res://cenas/caixa.tscn" id="5_nkfxj"]
+[ext_resource type="PackedScene" uid="uid://v1j86q35s7p" path="res://cenas/barraca.tscn" id="6_lmsrm"]
+[ext_resource type="PackedScene" uid="uid://bo7ap1ep1jien" path="res://cenas/poste2.tscn" id="7_jvsx7"]
+[ext_resource type="PackedScene" uid="uid://dw6t8u5rioj4n" path="res://cenas/poste3.tscn" id="8_3846v"]
+[ext_resource type="PackedScene" uid="uid://flagns0cbemg" path="res://cenas/poste1.tscn" id="9_agiav"]
+
+[sub_resource type="Curve2D" id="Curve2D_6bpac"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1216, 750, 0, 0, 0, 0, 800, 750)
+}
+point_count = 2
+
+[node name="Node2D" type="Node2D" unique_id=1497396039]
+
+[node name="Fundo" parent="." unique_id=1542186277 instance=ExtResource("1_axhim")]
+show_behind_parent = true
+z_index = -2
+
+[node name="censurador" parent="." unique_id=1177385418 node_paths=PackedStringArray("patrol_path") instance=ExtResource("2_nhal8")]
+position = Vector2(977, 757)
+collision_layer = 1
+collision_mask = 1
+patrol_path = NodePath("../path_patrol")
+
+[node name="carteiro" parent="." unique_id=178538168 instance=ExtResource("3_0rtfx")]
+position = Vector2(107, 756)
+
+[node name="path_patrol" type="Path2D" parent="." unique_id=142645807]
+curve = SubResource("Curve2D_6bpac")
+
+[node name="Node2D" parent="." unique_id=179646166 instance=ExtResource("4_geyy0")]
+position = Vector2(2651, 428)
+
+[node name="Caixa" parent="." unique_id=554516880 instance=ExtResource("5_nkfxj")]
+z_index = -1
+position = Vector2(2346, 781)
+
+[node name="Caixa2" parent="." unique_id=208388947 instance=ExtResource("5_nkfxj")]
+z_index = -1
+position = Vector2(2653, 593)
+
+[node name="Caixa3" parent="." unique_id=508849226 instance=ExtResource("5_nkfxj")]
+z_index = -1
+position = Vector2(2607, 593)
+
+[node name="Caixa4" parent="." unique_id=1183104261 instance=ExtResource("5_nkfxj")]
+z_index = -1
+position = Vector2(2653, 563)
+
+[node name="Caixa5" parent="." unique_id=1458945293 instance=ExtResource("5_nkfxj")]
+z_index = -1
+position = Vector2(614, 592)
+
+[node name="Caixa6" parent="." unique_id=942336214 instance=ExtResource("5_nkfxj")]
+z_index = -1
+position = Vector2(568, 592)
+
+[node name="Caixa7" parent="." unique_id=1089442832 instance=ExtResource("5_nkfxj")]
+z_index = -1
+position = Vector2(614, 562)
+
+[node name="Barraca" parent="." unique_id=940644642 instance=ExtResource("6_lmsrm")]
+z_index = -3
+position = Vector2(682, 688)
+scale = Vector2(2, 2)
+cor = Color(0.27021253, 0.56929845, 0.7451093, 1)
+
+[node name="Barraca2" parent="." unique_id=1769249425 instance=ExtResource("6_lmsrm")]
+z_index = -2
+position = Vector2(1676, 688)
+scale = Vector2(2, 2)
+cor = Color(1, 0.21268043, 0.15969583, 1)
+
+[node name="Barraca3" parent="." unique_id=561615072 instance=ExtResource("6_lmsrm")]
+z_index = -1
+position = Vector2(2111, 688)
+scale = Vector2(2, 2)
+cor = Color(0.84624225, 0.31904176, 0.74241024, 1)
+
+[node name="Barraca4" parent="." unique_id=1920338604 instance=ExtResource("6_lmsrm")]
+z_index = -3
+position = Vector2(2537, 688)
+scale = Vector2(2, 2)
+cor = Color(0.25096, 0.64962953, 0.43389818, 1)
+
+[node name="Node2D2" parent="." unique_id=617412226 instance=ExtResource("7_jvsx7")]
+z_index = -4
+position = Vector2(447, 662)
+
+[node name="Node2D3" parent="." unique_id=309249960 instance=ExtResource("8_3846v")]
+z_index = -4
+position = Vector2(927, 662)
+
+[node name="Node2D4" parent="." unique_id=1131754236 instance=ExtResource("7_jvsx7")]
+z_index = -4
+position = Vector2(1388, 462)
+
+[node name="Node2D5" parent="." unique_id=1433537241 instance=ExtResource("8_3846v")]
+z_index = -4
+position = Vector2(2348, 462)
+
+[node name="Node2D6" parent="." unique_id=457941740 instance=ExtResource("9_agiav")]
+z_index = -4
+position = Vector2(1868, 462)
+
+[node name="Barraca5" parent="." unique_id=450200573 instance=ExtResource("6_lmsrm")]
+z_index = -1
+position = Vector2(2956, 688)
+scale = Vector2(2, 2)
+cor = Color(0.83086085, 0.44547224, 0, 1)
+
+[node name="Barraca6" parent="." unique_id=542822231 instance=ExtResource("6_lmsrm")]
+z_index = -3
+position = Vector2(3382, 688)
+scale = Vector2(2, 2)
+cor = Color(0.6028506, 0.43108505, 0.99303585, 1)
+
+[node name="Caixa8" parent="." unique_id=297916940 instance=ExtResource("5_nkfxj")]
+z_index = -1
+position = Vector2(3198, 781)
+
+[node name="Caixa9" parent="." unique_id=373520770 instance=ExtResource("5_nkfxj")]
+z_index = -1
+position = Vector2(3152, 781)
+
+[node name="Caixa10" parent="." unique_id=521950811 instance=ExtResource("5_nkfxj")]
+z_index = -1
+position = Vector2(3152, 751)
+
+[node name="Node2D7" parent="." unique_id=1957932714 instance=ExtResource("7_jvsx7")]
+z_index = -4
+position = Vector2(-762, 455)
+
+[node name="Node2D8" parent="." unique_id=866137657 instance=ExtResource("8_3846v")]
+z_index = -4
+position = Vector2(198, 455)
+
+[node name="Node2D9" parent="." unique_id=1007144204 instance=ExtResource("9_agiav")]
+z_index = -4
+position = Vector2(-282, 455)
+
+[node name="Barraca7" parent="." unique_id=1960621956 instance=ExtResource("6_lmsrm")]
+z_index = -3
+position = Vector2(-536, 688)
+scale = Vector2(2, 2)
+cor = Color(0, 0.62200004, 0.53708255, 1)
+
+[node name="Caixa11" parent="." unique_id=947749805 instance=ExtResource("5_nkfxj")]
+z_index = -1
+position = Vector2(-359, 781)
+
+[node name="Caixa12" parent="." unique_id=1408250120 instance=ExtResource("5_nkfxj")]
+z_index = -1
+position = Vector2(-359, 751)
+
+[node name="Caixa13" parent="." unique_id=224603163 instance=ExtResource("5_nkfxj")]
+z_index = -1
+position = Vector2(1700, 592)
+
+[node name="Caixa14" parent="." unique_id=997497645 instance=ExtResource("5_nkfxj")]
+z_index = -1
+position = Vector2(1700, 562)
+
+[node name="Barraca8" parent="." unique_id=98344420 instance=ExtResource("6_lmsrm")]
+z_index = -3
+position = Vector2(3662, 688)
+scale = Vector2(2, 2)
+cor = Color(0.27021253, 0.56929845, 0.7451093, 1)
+
+[node name="Barraca9" parent="." unique_id=1940585464 instance=ExtResource("6_lmsrm")]
+z_index = -2
+position = Vector2(3662, 499)
+scale = Vector2(2, 2)
+cor = Color(0.27021253, 0.56929845, 0.7451093, 1)
+
+[node name="Caixa15" parent="." unique_id=1574463691 instance=ExtResource("5_nkfxj")]
+z_index = -1
+position = Vector2(3406, 593)
+
+[node name="Caixa16" parent="." unique_id=1283596307 instance=ExtResource("5_nkfxj")]
+z_index = -1
+position = Vector2(3360, 593)
+
+[node name="Caixa17" parent="." unique_id=1666098404 instance=ExtResource("5_nkfxj")]
+z_index = -1
+position = Vector2(3940, 780)
+
+[node name="Caixa18" parent="." unique_id=171408644 instance=ExtResource("5_nkfxj")]
+z_index = -1
+position = Vector2(3894, 780)
+
+[node name="Caixa19" parent="." unique_id=1922800735 instance=ExtResource("5_nkfxj")]
+z_index = -1
+position = Vector2(3940, 750)
+
+[connection signal="entrou" from="carteiro" to="censurador" method="_on_carteiro_entrou"]
+[connection signal="saiu" from="carteiro" to="censurador" method="_on_carteiro_saiu"]
+[connection signal="entrou" from="Barraca" to="carteiro" method="_on_barraca_entrou"]
+[connection signal="saiu" from="Barraca" to="carteiro" method="_on_barraca_saiu"]

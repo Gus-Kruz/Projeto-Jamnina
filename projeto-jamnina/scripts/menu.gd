@@ -156,7 +156,7 @@ func _on_creditos_pressed() -> void:
 	transicao("res://cenas/menu/creditos2.tscn")
 
 func _on_jogar_pressed() -> void:
-	transicao("res://cenas/nível1.tscn")
+	transicao("res://cenas/níveis/nível1.tscn")
 	
 func _on_sair_pressed() -> void:
 	var transicao = TRANSICAO.instantiate()
