@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://uk7hj6ery0bp"]
+
+[ext_resource type="Shader" uid="uid://ji6s68vkbs2k" path="res://recursos/transicao.gdshader" id="1_hol4j"]
+
+[sub_resource type="Animation" id="Animation_tt6f7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fade/ColorRect:material:shader_parameter/radius")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.000000095]
+}
+
+[sub_resource type="Animation" id="Animation_hol4j"]
+resource_name = "fade"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fade/ColorRect:material:shader_parameter/radius")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [2.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tt6f7"]
+_data = {
+&"RESET": SubResource("Animation_tt6f7"),
+&"fade": SubResource("Animation_hol4j")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tn3cb"]
+shader = ExtResource("1_hol4j")
+shader_parameter/center = Vector2(0.5, 0.5)
+shader_parameter/radius = 2.000000095
+shader_parameter/pixel_size = 2.0
+shader_parameter/resolution = Vector2(400, 400)
+shader_parameter/dither_offset = Vector2(2, 0)
+shader_parameter/bayer_size = 2
+shader_parameter/interpolate = true
+shader_parameter/invert = true
+shader_parameter/falloff = 2.5
+shader_parameter/color = Color(0, 0, 0, 1)
+
+[node name="transicao" type="Node2D" unique_id=1363783604]
+
+[node name="fade" type="AnimationPlayer" parent="." unique_id=550050958]
+libraries/ = SubResource("AnimationLibrary_tt6f7")
+
+[node name="ColorRect" type="ColorRect" parent="fade" unique_id=1932195485]
+top_level = true
+visibility_layer = 513
+z_index = 200
+material = SubResource("ShaderMaterial_tn3cb")
+offset_right = 1920.0
+offset_bottom = 1080.0
