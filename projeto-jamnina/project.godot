@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Projeto-Jamnina"
-run/main_scene="uid://dxxjkmjo0xf5a"
+run/main_scene="uid://bpg6h4vg8866b"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://5hipycajjym0"]
+
+[ext_resource type="Texture2D" uid="uid://hshnl1236ql2" path="res://artes/pombo/Ilustração_Sem_Título-1.png" id="1_7wfam"]
+[ext_resource type="Texture2D" uid="uid://c04tw3nw4bfsg" path="res://artes/pombo/Ilustração_Sem_Título-2.png" id="2_yvo7f"]
+[ext_resource type="Texture2D" uid="uid://cnolefcqa1ywu" path="res://artes/pombo/Ilustração_Sem_Título-3.png" id="3_orcdd"]
+[ext_resource type="Texture2D" uid="uid://be7hyyqmfseh" path="res://artes/pombo/Ilustração_Sem_Título-4.png" id="4_afw54"]
+[ext_resource type="Texture2D" uid="uid://c7fpo2y77qpkk" path="res://artes/pombo/Ilustração_Sem_Título-5.png" id="5_ekh3h"]
+[ext_resource type="Texture2D" uid="uid://cw8g4csihrjmt" path="res://artes/pombo/Ilustração_Sem_Título-6.png" id="6_846vc"]
+[ext_resource type="Texture2D" uid="uid://bw4txv1onxrgw" path="res://artes/pombo/Ilustração_Sem_Título-8.png" id="7_upxlx"]
+[ext_resource type="Texture2D" uid="uid://yeuwd5snniyv" path="res://artes/pombo/Ilustração_Sem_Título-7.png" id="8_w5h04"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3qiwm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7wfam")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_yvo7f")
+}],
+"loop": true,
+"name": &"parado",
+"speed": 1.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_orcdd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_afw54")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ekh3h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_846vc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_upxlx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_w5h04")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_846vc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ekh3h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_afw54")
+}],
+"loop": true,
+"name": &"voando",
+"speed": 12.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_apk3l"]
+size = Vector2(108, 48)
+
+[node name="Pombo" type="CharacterBody2D" unique_id=422309689]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=701523270]
+position = Vector2(0, -43)
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_3qiwm")
+animation = &"parado"
+frame_progress = 0.27785808
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2041067978]
+position = Vector2(0, -31)
+shape = SubResource("RectangleShape2D_apk3l")
