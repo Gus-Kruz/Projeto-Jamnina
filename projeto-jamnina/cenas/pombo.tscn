@@ -61,6 +61,7 @@ animations = [{
 size = Vector2(133, 48)
 
 [node name="Pombo" type="Node2D" unique_id=210578512]
+scale = Vector2(1.5, 1.5)
 script = ExtResource("1_orcdd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=701523270]

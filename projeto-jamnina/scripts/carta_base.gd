@@ -98,13 +98,13 @@ func verificar_vitoria() -> void:
 		tween.tween_property($TextoVitoria, "scale", Vector2(1.0, 1.0), 0.15)\
 			.set_trans(Tween.TRANS_SINE)\
 			.set_ease(Tween.EASE_IN_OUT)
+		await get_tree().create_timer(1).timeout
 		var transicao = TRANSICAO.instantiate()
 		add_child(transicao)
 		var fade = transicao.get_node("fade")
-		await get_tree().create_timer(1).timeout
 		fade.play('fade')
 		await fade.animation_finished
 		await get_tree().create_timer(2).timeout
-		get_tree().change_scene_to_file("res://cenas/níveis/nível" + "proxima_fase"+".tscn")
+		get_tree().change_scene_to_file("res://cenas/níveis/nível" + proxima_fase +".tscn")
 	else:
 		$TextoVitoria.hide()
