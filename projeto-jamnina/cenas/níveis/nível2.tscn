@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bo7ap1ep1jien" path="res://cenas/poste2.tscn" id="6_714xk"]
 [ext_resource type="PackedScene" uid="uid://dw6t8u5rioj4n" path="res://cenas/poste3.tscn" id="7_w24lt"]
 [ext_resource type="PackedScene" uid="uid://cl2bjalmnbsvy" path="res://cenas/caixa.tscn" id="8_t7blp"]
+[ext_resource type="PackedScene" uid="uid://5hipycajjym0" path="res://cenas/pombo.tscn" id="9_w24lt"]
 
 [sub_resource type="Curve2D" id="Curve2D_6bpac"]
 _data = {
@@ -102,6 +103,10 @@ position = Vector2(674, 532)
 [node name="Node2D8" parent="." unique_id=1919800868 instance=ExtResource("8_t7blp")]
 z_index = 1
 position = Vector2(724, 592)
+
+[node name="Pombo" parent="." unique_id=210578512 instance=ExtResource("9_w24lt")]
+position = Vector2(287, 374)
+caminho = "2"
 
 [connection signal="entrou" from="carteiro" to="censurador" method="_on_carteiro_entrou"]
 [connection signal="saiu" from="carteiro" to="censurador" method="_on_carteiro_saiu"]

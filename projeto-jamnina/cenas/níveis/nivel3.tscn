@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bo7ap1ep1jien" path="res://cenas/poste2.tscn" id="7_h4br7"]
 [ext_resource type="PackedScene" uid="uid://dw6t8u5rioj4n" path="res://cenas/poste3.tscn" id="8_vsvla"]
 [ext_resource type="PackedScene" uid="uid://flagns0cbemg" path="res://cenas/poste1.tscn" id="9_smulf"]
+[ext_resource type="PackedScene" uid="uid://5hipycajjym0" path="res://cenas/pombo.tscn" id="10_xf5p6"]
 
 [sub_resource type="Curve2D" id="Curve2D_s1qmr"]
 _data = {
@@ -127,6 +128,10 @@ position = Vector2(726, 579)
 [node name="Node2D16" parent="." unique_id=1164808705 instance=ExtResource("9_smulf")]
 z_index = -4
 position = Vector2(246, 579)
+
+[node name="Pombo" parent="." unique_id=210578512 instance=ExtResource("10_xf5p6")]
+position = Vector2(141, 291)
+caminho = "3"
 
 [connection signal="entrou" from="carteiro" to="censurador" method="_on_carteiro_entrou"]
 [connection signal="saiu" from="carteiro" to="carteiro" method="_on_saiu"]
