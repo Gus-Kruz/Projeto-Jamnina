@@ -1,23 +1,23 @@
 [gd_scene format=3 uid="uid://b1eafwherncqk"]
 
-[ext_resource type="Texture2D" uid="uid://dxqrfxlpv3b25" path="res://artes/guarda/andar1/Ilustração_Sem_Título-2.png" id="1_nfkeo"]
-[ext_resource type="Texture2D" uid="uid://dotllboqb0m0i" path="res://artes/guarda/andar1/Ilustração_Sem_Título-3.png" id="2_mgmyx"]
-[ext_resource type="Texture2D" uid="uid://bew84j6o4hgl0" path="res://artes/guarda/andar1/Ilustração_Sem_Título-1.png" id="3_jpje3"]
-[ext_resource type="Texture2D" uid="uid://dip2po4csv7im" path="res://artes/guarda/andar2/Ilustração_Sem_Título-2.png" id="4_g0csu"]
-[ext_resource type="Texture2D" uid="uid://ji3xr3kaxxcn" path="res://artes/guarda/andar2/Ilustração_Sem_Título-3.png" id="5_nllrr"]
-[ext_resource type="Texture2D" uid="uid://br1y02hwlvyld" path="res://artes/guarda/andar2/Ilustração_Sem_Título-1.png" id="6_oxc11"]
-[ext_resource type="Texture2D" uid="uid://dnqmd6nxniase" path="res://artes/guarda/andar3/Ilustração_Sem_Título-2.png" id="7_3menn"]
-[ext_resource type="Texture2D" uid="uid://babgxat4exgd3" path="res://artes/guarda/andar3/Ilustração_Sem_Título-3.png" id="8_qjfht"]
-[ext_resource type="Texture2D" uid="uid://dch1vdx3sfq0p" path="res://artes/guarda/andar3/Ilustração_Sem_Título-1.png" id="9_iw1un"]
-[ext_resource type="Texture2D" uid="uid://b0hehs4r5insu" path="res://artes/guarda/correr1/Ilustração_Sem_Título-2.png" id="10_g0csu"]
-[ext_resource type="Texture2D" uid="uid://5bn8yyxu6p02" path="res://artes/guarda/correr1/Ilustração_Sem_Título-3.png" id="11_nllrr"]
-[ext_resource type="Texture2D" uid="uid://cyvbln6hkbv4l" path="res://artes/guarda/correr1/Ilustração_Sem_Título-1.png" id="12_oxc11"]
-[ext_resource type="Texture2D" uid="uid://58k7ra0s7ojl" path="res://artes/guarda/correr2/Ilustração_Sem_Título-2(1).png" id="13_fmy1t"]
-[ext_resource type="Texture2D" uid="uid://wp8lx1e513hq" path="res://artes/guarda/correr2/Ilustração_Sem_Título-3(1).png" id="14_xrqr0"]
-[ext_resource type="Texture2D" uid="uid://dnshptwc0vxpj" path="res://artes/guarda/correr2/Ilustração_Sem_Título-1(1).png" id="15_apleh"]
-[ext_resource type="Texture2D" uid="uid://cb0stqjcscmsa" path="res://artes/guarda/correr3/Ilustração_Sem_Título-5.png" id="16_vw8ju"]
-[ext_resource type="Texture2D" uid="uid://d2scfqrptrhgv" path="res://artes/guarda/correr3/Ilustração_Sem_Título-6.png" id="17_qel87"]
-[ext_resource type="Texture2D" uid="uid://b2rti34wkmthx" path="res://artes/guarda/correr3/Ilustração_Sem_Título-4.png" id="18_mhlyt"]
+[ext_resource type="Texture2D" uid="uid://dxqrfxlpv3b25" path="res://recursos/sprites/guarda/andar1/Ilustração_Sem_Título-2.png" id="1_nfkeo"]
+[ext_resource type="Texture2D" uid="uid://dotllboqb0m0i" path="res://recursos/sprites/guarda/andar1/Ilustração_Sem_Título-3.png" id="2_mgmyx"]
+[ext_resource type="Texture2D" uid="uid://bew84j6o4hgl0" path="res://recursos/sprites/guarda/andar1/Ilustração_Sem_Título-1.png" id="3_jpje3"]
+[ext_resource type="Texture2D" uid="uid://dip2po4csv7im" path="res://recursos/sprites/guarda/andar2/Ilustração_Sem_Título-2.png" id="4_g0csu"]
+[ext_resource type="Texture2D" uid="uid://ji3xr3kaxxcn" path="res://recursos/sprites/guarda/andar2/Ilustração_Sem_Título-3.png" id="5_nllrr"]
+[ext_resource type="Texture2D" uid="uid://br1y02hwlvyld" path="res://recursos/sprites/guarda/andar2/Ilustração_Sem_Título-1.png" id="6_oxc11"]
+[ext_resource type="Texture2D" uid="uid://dnqmd6nxniase" path="res://recursos/sprites/guarda/andar3/Ilustração_Sem_Título-2.png" id="7_3menn"]
+[ext_resource type="Texture2D" uid="uid://babgxat4exgd3" path="res://recursos/sprites/guarda/andar3/Ilustração_Sem_Título-3.png" id="8_qjfht"]
+[ext_resource type="Texture2D" uid="uid://dch1vdx3sfq0p" path="res://recursos/sprites/guarda/andar3/Ilustração_Sem_Título-1.png" id="9_iw1un"]
+[ext_resource type="Texture2D" uid="uid://b0hehs4r5insu" path="res://recursos/sprites/guarda/correr1/Ilustração_Sem_Título-2.png" id="10_f47a0"]
+[ext_resource type="Texture2D" uid="uid://5bn8yyxu6p02" path="res://recursos/sprites/guarda/correr1/Ilustração_Sem_Título-3.png" id="11_tuwvt"]
+[ext_resource type="Texture2D" uid="uid://cyvbln6hkbv4l" path="res://recursos/sprites/guarda/correr1/Ilustração_Sem_Título-1.png" id="12_k5nuu"]
+[ext_resource type="Texture2D" uid="uid://58k7ra0s7ojl" path="res://recursos/sprites/guarda/correr2/Ilustração_Sem_Título-2(1).png" id="13_fmy1t"]
+[ext_resource type="Texture2D" uid="uid://wp8lx1e513hq" path="res://recursos/sprites/guarda/correr2/Ilustração_Sem_Título-3(1).png" id="14_xrqr0"]
+[ext_resource type="Texture2D" uid="uid://dnshptwc0vxpj" path="res://recursos/sprites/guarda/correr2/Ilustração_Sem_Título-1(1).png" id="15_apleh"]
+[ext_resource type="Texture2D" uid="uid://cb0stqjcscmsa" path="res://recursos/sprites/guarda/correr3/Ilustração_Sem_Título-5.png" id="16_vw8ju"]
+[ext_resource type="Texture2D" uid="uid://d2scfqrptrhgv" path="res://recursos/sprites/guarda/correr3/Ilustração_Sem_Título-6.png" id="17_qel87"]
+[ext_resource type="Texture2D" uid="uid://b2rti34wkmthx" path="res://recursos/sprites/guarda/correr3/Ilustração_Sem_Título-4.png" id="18_mhlyt"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6vrj8"]
 animations = [{
@@ -31,7 +31,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("3_jpje3")
 }],
-"loop": 1,
+"loop": true,
 "name": &"andar1",
 "speed": 4.0
 }, {
@@ -45,7 +45,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("6_oxc11")
 }],
-"loop": 1,
+"loop": true,
 "name": &"andar2",
 "speed": 4.0
 }, {
@@ -59,21 +59,21 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("9_iw1un")
 }],
-"loop": 1,
+"loop": true,
 "name": &"andar3",
 "speed": 4.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("10_g0csu")
+"texture": ExtResource("10_f47a0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_nllrr")
+"texture": ExtResource("11_tuwvt")
 }, {
 "duration": 1.0,
-"texture": ExtResource("12_oxc11")
+"texture": ExtResource("12_k5nuu")
 }],
-"loop": 1,
+"loop": true,
 "name": &"correr1",
 "speed": 9.0
 }, {
@@ -87,7 +87,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("15_apleh")
 }],
-"loop": 1,
+"loop": true,
 "name": &"correr2",
 "speed": 9.0
 }, {
@@ -101,7 +101,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("18_mhlyt")
 }],
-"loop": 1,
+"loop": true,
 "name": &"correr3",
 "speed": 9.0
 }]

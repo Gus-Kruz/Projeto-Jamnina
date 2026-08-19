@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://uk7hj6ery0bp"]
 
-[ext_resource type="Shader" uid="uid://ji6s68vkbs2k" path="res://recursos/transicao.gdshader" id="1_hol4j"]
+[ext_resource type="Shader" uid="uid://ji6s68vkbs2k" path="res://recursos/shaders/transicao.gdshader" id="1_hol4j"]
 
 [sub_resource type="Animation" id="Animation_tt6f7"]
 length = 0.001

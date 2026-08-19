@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://bpoak4db1u4yf"]
 
 [ext_resource type="Script" uid="uid://duttwsqkqgdb2" path="res://scripts/creditos.gd" id="1_qjo7q"]
-[ext_resource type="Texture2D" uid="uid://jad833r7pty2" path="res://artes/menu/1719793.jpg" id="2_73jr6"]
-[ext_resource type="FontFile" uid="uid://b14d6kqdef1ml" path="res://recursos/Daydream DEMO.otf" id="3_qjo7q"]
-[ext_resource type="Texture2D" uid="uid://ja8vgkbo2kmh" path="res://artes/menu/Sair.png" id="6_rpw3p"]
+[ext_resource type="Texture2D" uid="uid://jad833r7pty2" path="res://recursos/sprites/menu/1719793.jpg" id="2_73jr6"]
+[ext_resource type="FontFile" uid="uid://b14d6kqdef1ml" path="res://recursos/fontes/Daydream DEMO.otf" id="3_qjo7q"]
+[ext_resource type="Texture2D" uid="uid://ja8vgkbo2kmh" path="res://recursos/sprites/menu/Sair.png" id="6_rpw3p"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_6o84d"]
 font = ExtResource("3_qjo7q")

@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://bpg6h4vg8866b"]
 
 [ext_resource type="Script" uid="uid://dgx0e78vdlmfo" path="res://scripts/menu.gd" id="1_qcnrj"]
-[ext_resource type="Texture2D" uid="uid://jad833r7pty2" path="res://artes/menu/1719793.jpg" id="2_qcnrj"]
-[ext_resource type="Texture2D" uid="uid://bprr6w1ob06x" path="res://artes/Capa.png" id="3_qcnrj"]
-[ext_resource type="Texture2D" uid="uid://c6cp8s4bptnhh" path="res://artes/menu/Jogar.png" id="4_s4mth"]
-[ext_resource type="Texture2D" uid="uid://c67dhcvew6w5i" path="res://artes/menu/Creditos.png" id="6_lvcsh"]
-[ext_resource type="Texture2D" uid="uid://ja8vgkbo2kmh" path="res://artes/menu/Sair.png" id="7_ktxou"]
-[ext_resource type="Texture2D" uid="uid://ci2p6gjr2by74" path="res://artes/menu/Versão.png" id="8_qygre"]
+[ext_resource type="Texture2D" uid="uid://jad833r7pty2" path="res://recursos/sprites/menu/1719793.jpg" id="2_qcnrj"]
+[ext_resource type="Texture2D" uid="uid://bprr6w1ob06x" path="res://recursos/sprites/Capa.png" id="3_qcnrj"]
+[ext_resource type="Texture2D" uid="uid://c6cp8s4bptnhh" path="res://recursos/sprites/menu/Jogar.png" id="4_s4mth"]
+[ext_resource type="Texture2D" uid="uid://c67dhcvew6w5i" path="res://recursos/sprites/menu/Creditos.png" id="6_lvcsh"]
+[ext_resource type="Texture2D" uid="uid://ja8vgkbo2kmh" path="res://recursos/sprites/menu/Sair.png" id="7_ktxou"]
+[ext_resource type="Texture2D" uid="uid://ci2p6gjr2by74" path="res://recursos/sprites/menu/Versão.png" id="8_qygre"]
 
 [node name="Menu" type="Node2D" unique_id=1588047816]
 script = ExtResource("1_qcnrj")

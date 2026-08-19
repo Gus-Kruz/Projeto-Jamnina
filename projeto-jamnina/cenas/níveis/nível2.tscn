@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://dp4nl8qqjsw0v"]
 
-[ext_resource type="PackedScene" uid="uid://df7hli5fxd15g" path="res://cenas/fundo.tscn" id="1_xwexc"]
-[ext_resource type="PackedScene" uid="uid://bdlq2vd2awk4h" path="res://cenas/censurador.tscn" id="2_oolwa"]
-[ext_resource type="PackedScene" uid="uid://cith6nwb12npx" path="res://cenas/personagem.tscn" id="3_e4thi"]
-[ext_resource type="PackedScene" uid="uid://v1j86q35s7p" path="res://cenas/barraca.tscn" id="4_714xk"]
-[ext_resource type="PackedScene" uid="uid://crs1mp07n8kqk" path="res://cenas/macadoamor.tscn" id="5_w24lt"]
-[ext_resource type="PackedScene" uid="uid://bo7ap1ep1jien" path="res://cenas/poste2.tscn" id="6_714xk"]
-[ext_resource type="PackedScene" uid="uid://dw6t8u5rioj4n" path="res://cenas/poste3.tscn" id="7_w24lt"]
-[ext_resource type="PackedScene" uid="uid://cl2bjalmnbsvy" path="res://cenas/caixa.tscn" id="8_t7blp"]
-[ext_resource type="PackedScene" uid="uid://5hipycajjym0" path="res://cenas/pombo.tscn" id="9_w24lt"]
+[ext_resource type="PackedScene" uid="uid://df7hli5fxd15g" path="res://cenas/criacao_niveis/fundo.tscn" id="1_xwexc"]
+[ext_resource type="PackedScene" uid="uid://bdlq2vd2awk4h" path="res://cenas/personagens/censurador.tscn" id="2_oolwa"]
+[ext_resource type="PackedScene" uid="uid://cith6nwb12npx" path="res://cenas/personagens/personagem.tscn" id="3_e4thi"]
+[ext_resource type="PackedScene" uid="uid://v1j86q35s7p" path="res://cenas/criacao_niveis/barraca.tscn" id="4_714xk"]
+[ext_resource type="PackedScene" uid="uid://crs1mp07n8kqk" path="res://cenas/criacao_niveis/macadoamor.tscn" id="5_w24lt"]
+[ext_resource type="PackedScene" uid="uid://bo7ap1ep1jien" path="res://cenas/criacao_niveis/poste2.tscn" id="6_714xk"]
+[ext_resource type="PackedScene" uid="uid://dw6t8u5rioj4n" path="res://cenas/criacao_niveis/poste3.tscn" id="7_w24lt"]
+[ext_resource type="PackedScene" uid="uid://cl2bjalmnbsvy" path="res://cenas/criacao_niveis/caixa.tscn" id="8_t7blp"]
+[ext_resource type="PackedScene" uid="uid://5hipycajjym0" path="res://cenas/personagens/pombo.tscn" id="9_w24lt"]
 
 [sub_resource type="Curve2D" id="Curve2D_6bpac"]
 _data = {

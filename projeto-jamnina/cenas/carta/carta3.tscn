@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://beirh66txm7wu"]
 
 [ext_resource type="Script" uid="uid://2746ls0ihc5r" path="res://scripts/carta_base.gd" id="1_j3t0r"]
-[ext_resource type="Texture2D" uid="uid://bmfouetmpeefm" path="res://artes/puzzle_carta/papel_amassado.jpg" id="2_of7tc"]
-[ext_resource type="FontFile" uid="uid://b14d6kqdef1ml" path="res://recursos/Daydream DEMO.otf" id="3_vaiuh"]
+[ext_resource type="Texture2D" uid="uid://bmfouetmpeefm" path="res://recursos/sprites/puzzle_carta/papel_amassado.jpg" id="2_of7tc"]
+[ext_resource type="FontFile" uid="uid://b14d6kqdef1ml" path="res://recursos/fontes/Daydream DEMO.otf" id="3_vaiuh"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_epxch"]
 font = ExtResource("3_vaiuh")
@@ -19,6 +19,7 @@ grow_vertical = 2
 script = ExtResource("1_j3t0r")
 frase_alvo = Array[String](["eu", "e", "la", "ele"])
 frase_inicial = Array[String](["la", "ele", "e", "eu"])
+proxima_fase = "final"
 
 [node name="Fundo" type="TextureRect" parent="." unique_id=1192648343]
 layout_mode = 1

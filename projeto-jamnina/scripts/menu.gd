@@ -1,7 +1,7 @@
 extends Node2D
 
 const TRANSICAO =  preload("res://cenas/menu/transicao.tscn")
-const CARTA_TEXTURE = preload("res://artes/menu/Carta.png")
+const CARTA_TEXTURE = preload("res://recursos/sprites/menu/Carta.png")
 const QTD_CARTAS = 20
 
 var cartas_container : Control

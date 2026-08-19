@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://csax7nkyf1t0o"]
 
 [ext_resource type="Script" uid="uid://ri028vl6v60a" path="res://scripts/pedaco_carta.gd" id="1_pedaco"]
-[ext_resource type="FontFile" uid="uid://b14d6kqdef1ml" path="res://recursos/Daydream DEMO.otf" id="2_xvpu2"]
+[ext_resource type="FontFile" uid="uid://b14d6kqdef1ml" path="res://recursos/fontes/Daydream DEMO.otf" id="2_xvpu2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pedaco"]
 bg_color = Color(0.96, 0.94, 0.88, 1)

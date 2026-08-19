@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://clrrh8p1q7crw"]
 
 [ext_resource type="Script" uid="uid://duttwsqkqgdb2" path="res://scripts/creditos.gd" id="1_1a08s"]
-[ext_resource type="Texture2D" uid="uid://jad833r7pty2" path="res://artes/menu/1719793.jpg" id="2_j25my"]
-[ext_resource type="FontFile" uid="uid://b14d6kqdef1ml" path="res://recursos/Daydream DEMO.otf" id="3_victy"]
-[ext_resource type="Texture2D" uid="uid://dhoui4578xlu6" path="res://artes/menu/Voltar.png" id="4_300fn"]
+[ext_resource type="Texture2D" uid="uid://jad833r7pty2" path="res://recursos/sprites/menu/1719793.jpg" id="2_j25my"]
+[ext_resource type="FontFile" uid="uid://b14d6kqdef1ml" path="res://recursos/fontes/Daydream DEMO.otf" id="3_victy"]
+[ext_resource type="Texture2D" uid="uid://dhoui4578xlu6" path="res://recursos/sprites/menu/Voltar.png" id="4_300fn"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_7jxve"]
 paragraph_spacing = 10.0
