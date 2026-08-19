@@ -78,6 +78,10 @@ animation = &"parado"
 position = Vector2(-6.5, 0)
 shape = SubResource("RectangleShape2D_tyg5f")
 
+[node name="coyote" type="Timer" parent="." unique_id=711825353]
+wait_time = 0.05
+
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="coyote" to="." method="_on_coyote_timeout"]

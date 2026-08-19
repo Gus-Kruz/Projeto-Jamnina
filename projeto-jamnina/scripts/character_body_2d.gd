@@ -6,6 +6,7 @@ var dash = false
 var pode
 var dentro
 var inside
+var coyote
 signal entrou
 signal saiu
 
@@ -21,8 +22,12 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta * 1.9
 	if is_on_floor():
 		pode = true
-	# Handle jump.
-	if Input.is_action_just_pressed("cima") and is_on_floor():
+		coyote = true
+	if not is_on_floor():
+		$coyote.start()
+
+	if Input.is_action_just_pressed("cima") and (is_on_floor() or coyote):
+		coyote = false
 		velocity.y = JUMP_VELOCITY
 
 	if Input.is_action_just_pressed("baixo") and dentro and is_on_floor():
@@ -87,12 +92,5 @@ func _on_area_2d_area_exited(area: Area2D) -> void:
 	if area.is_in_group("barracas"):
 		dentro = false
 
-
-
-
-func _on_barraca_entrou() -> void:
-	pass # Replace with function body.
-
-
-func _on_barraca_saiu() -> void:
-	pass # Replace with function body.
+func _on_coyote_timeout() -> void:
+	coyote = false
