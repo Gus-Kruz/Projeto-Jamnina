@@ -102,10 +102,8 @@ func _on_pegacao_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Carteiro") and not dentro:
 		get_tree().reload_current_scene()
 
-
 func _on_carteiro_entrou() -> void:
 	dentro = true
-
 
 func _on_carteiro_saiu() -> void:
 	dentro = false

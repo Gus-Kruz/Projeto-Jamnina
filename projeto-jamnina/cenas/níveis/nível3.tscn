@@ -23,6 +23,7 @@ point_count = 2
 z_index = -2
 
 [node name="carteiro" parent="." unique_id=1227779810 instance=ExtResource("2_vqpxo")]
+z_index = 2
 position = Vector2(580, 505)
 
 [node name="barraca" parent="." unique_id=1769249425 instance=ExtResource("3_vi2ur")]
@@ -32,8 +33,6 @@ cor = Color(2.5027991e-06, 0.6027093, 0.6028643, 1)
 
 [node name="censurador" parent="." unique_id=2135449001 node_paths=PackedStringArray("patrol_path") instance=ExtResource("4_p2jsg")]
 position = Vector2(410, 758)
-collision_layer = 1
-collision_mask = 1
 patrol_path = NodePath("../Path2D")
 
 [node name="Path2D" type="Path2D" parent="." unique_id=1333579381]
@@ -134,6 +133,6 @@ position = Vector2(141, 291)
 caminho = "3"
 
 [connection signal="entrou" from="carteiro" to="censurador" method="_on_carteiro_entrou"]
-[connection signal="saiu" from="carteiro" to="carteiro" method="_on_saiu"]
+[connection signal="saiu" from="carteiro" to="censurador" method="_on_carteiro_saiu"]
 [connection signal="entrou" from="barraca" to="carteiro" method="_on_barraca_entrou"]
 [connection signal="saiu" from="barraca" to="carteiro" method="_on_barraca_saiu"]

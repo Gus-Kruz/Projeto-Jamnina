@@ -17,8 +17,6 @@ func _physics_process(delta: float) -> void:
 			inside = false
 			$AnimatedSprite2D.z_index = 2
 			$AnimatedSprite2D.modulate = Color(1.0, 1.0, 1.0, 1.0)
-			set_collision_layer_value(2, false)
-			set_collision_layer_value(1, true)
 		return
 	if not is_on_floor() and not dash:
 		velocity += get_gravity() * delta * 1.9

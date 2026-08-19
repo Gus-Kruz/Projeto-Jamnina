@@ -1,15 +1,15 @@
 [gd_scene format=3 uid="uid://pdlncy8s6vfx"]
 
-[ext_resource type="PackedScene" uid="uid://df7hli5fxd15g" path="res://cenas/fundo.tscn" id="1_nhal8"]
-[ext_resource type="PackedScene" uid="uid://bdlq2vd2awk4h" path="res://cenas/censurador.tscn" id="2_0rtfx"]
-[ext_resource type="PackedScene" uid="uid://cith6nwb12npx" path="res://cenas/personagem.tscn" id="3_geyy0"]
-[ext_resource type="PackedScene" uid="uid://crs1mp07n8kqk" path="res://cenas/macadoamor.tscn" id="4_nkfxj"]
-[ext_resource type="PackedScene" uid="uid://cl2bjalmnbsvy" path="res://cenas/caixa.tscn" id="5_lmsrm"]
-[ext_resource type="PackedScene" uid="uid://v1j86q35s7p" path="res://cenas/barraca.tscn" id="6_jvsx7"]
-[ext_resource type="PackedScene" uid="uid://bo7ap1ep1jien" path="res://cenas/poste2.tscn" id="7_3846v"]
-[ext_resource type="PackedScene" uid="uid://dw6t8u5rioj4n" path="res://cenas/poste3.tscn" id="8_agiav"]
-[ext_resource type="PackedScene" uid="uid://flagns0cbemg" path="res://cenas/poste1.tscn" id="9_qes07"]
-[ext_resource type="PackedScene" uid="uid://5hipycajjym0" path="res://cenas/pombo.tscn" id="10_vsxdp"]
+[ext_resource type="PackedScene" uid="uid://df7hli5fxd15g" path="res://cenas/criacao_niveis/fundo.tscn" id="1_nhal8"]
+[ext_resource type="PackedScene" uid="uid://bdlq2vd2awk4h" path="res://cenas/personagens/censurador.tscn" id="2_0rtfx"]
+[ext_resource type="PackedScene" uid="uid://cith6nwb12npx" path="res://cenas/personagens/personagem.tscn" id="3_geyy0"]
+[ext_resource type="PackedScene" uid="uid://crs1mp07n8kqk" path="res://cenas/criacao_niveis/macadoamor.tscn" id="4_nkfxj"]
+[ext_resource type="PackedScene" uid="uid://cl2bjalmnbsvy" path="res://cenas/criacao_niveis/caixa.tscn" id="5_lmsrm"]
+[ext_resource type="PackedScene" uid="uid://v1j86q35s7p" path="res://cenas/criacao_niveis/barraca.tscn" id="6_jvsx7"]
+[ext_resource type="PackedScene" uid="uid://bo7ap1ep1jien" path="res://cenas/criacao_niveis/poste2.tscn" id="7_3846v"]
+[ext_resource type="PackedScene" uid="uid://dw6t8u5rioj4n" path="res://cenas/criacao_niveis/poste3.tscn" id="8_agiav"]
+[ext_resource type="PackedScene" uid="uid://flagns0cbemg" path="res://cenas/criacao_niveis/poste1.tscn" id="9_qes07"]
+[ext_resource type="PackedScene" uid="uid://5hipycajjym0" path="res://cenas/personagens/pombo.tscn" id="10_vsxdp"]
 
 [sub_resource type="Curve2D" id="Curve2D_6bpac"]
 _data = {
@@ -22,14 +22,16 @@ point_count = 2
 [node name="Fundo" parent="." unique_id=1542186277 instance=ExtResource("1_nhal8")]
 show_behind_parent = true
 z_index = -2
+position = Vector2(1, -5)
 
-[node name="censurador2" parent="." unique_id=1177385418 node_paths=PackedStringArray("patrol_path") instance=ExtResource("2_0rtfx")]
+[node name="censurador" parent="." unique_id=1177385418 node_paths=PackedStringArray("patrol_path") instance=ExtResource("2_0rtfx")]
+z_as_relative = false
 position = Vector2(977, 757)
 patrol_path = NodePath("../path_patrol")
 
-[node name="carteiro2" parent="." unique_id=178538168 instance=ExtResource("3_geyy0")]
+[node name="carteiro" parent="." unique_id=178538168 instance=ExtResource("3_geyy0")]
+z_as_relative = false
 position = Vector2(107, 756)
-collision_mask = 3
 
 [node name="path_patrol" type="Path2D" parent="." unique_id=142645807]
 curve = SubResource("Curve2D_6bpac")
@@ -42,7 +44,6 @@ z_index = -1
 position = Vector2(2346, 781)
 
 [node name="Caixa2" parent="." unique_id=208388947 instance=ExtResource("5_lmsrm")]
-z_index = -1
 position = Vector2(2653, 593)
 
 [node name="Caixa3" parent="." unique_id=508849226 instance=ExtResource("5_lmsrm")]
@@ -50,20 +51,13 @@ z_index = -1
 position = Vector2(2607, 593)
 
 [node name="Caixa4" parent="." unique_id=1183104261 instance=ExtResource("5_lmsrm")]
-z_index = -1
 position = Vector2(2653, 563)
 
 [node name="Caixa5" parent="." unique_id=1458945293 instance=ExtResource("5_lmsrm")]
-z_index = -1
-position = Vector2(614, 592)
+position = Vector2(614, 586)
 
 [node name="Caixa6" parent="." unique_id=942336214 instance=ExtResource("5_lmsrm")]
-z_index = -1
-position = Vector2(568, 592)
-
-[node name="Caixa7" parent="." unique_id=1089442832 instance=ExtResource("5_lmsrm")]
-z_index = -1
-position = Vector2(614, 562)
+position = Vector2(568, 586)
 
 [node name="Node2D2" parent="." unique_id=960698715 instance=ExtResource("4_nkfxj")]
 position = Vector2(2651, 428)
@@ -72,32 +66,14 @@ position = Vector2(2651, 428)
 z_index = -1
 position = Vector2(2346, 781)
 
-[node name="Caixa9" parent="." unique_id=361892845 instance=ExtResource("5_lmsrm")]
-z_index = -1
-position = Vector2(2653, 593)
-
 [node name="Caixa10" parent="." unique_id=1534558979 instance=ExtResource("5_lmsrm")]
-z_index = -1
 position = Vector2(2607, 593)
 
-[node name="Caixa11" parent="." unique_id=33426541 instance=ExtResource("5_lmsrm")]
-z_index = -1
-position = Vector2(2653, 563)
-
-[node name="Caixa12" parent="." unique_id=1556636484 instance=ExtResource("5_lmsrm")]
-z_index = -1
-position = Vector2(614, 592)
-
-[node name="Caixa13" parent="." unique_id=1680263528 instance=ExtResource("5_lmsrm")]
-z_index = -1
-position = Vector2(568, 592)
-
 [node name="Caixa14" parent="." unique_id=1622988673 instance=ExtResource("5_lmsrm")]
-z_index = -1
-position = Vector2(614, 562)
+position = Vector2(567, 556)
 
 [node name="Barraca2" parent="." unique_id=940644642 instance=ExtResource("6_jvsx7")]
-z_index = -3
+z_index = -2
 position = Vector2(682, 688)
 scale = Vector2(2, 2)
 cor = Color(0.27021253, 0.56929845, 0.7451093, 1)
@@ -109,13 +85,13 @@ scale = Vector2(2, 2)
 cor = Color(1, 0.21268043, 0.15969583, 1)
 
 [node name="Barraca6" parent="." unique_id=561615072 instance=ExtResource("6_jvsx7")]
-z_index = -1
+z_index = -2
 position = Vector2(2111, 688)
 scale = Vector2(2, 2)
 cor = Color(0.84624225, 0.31904176, 0.74241024, 1)
 
 [node name="Barraca8" parent="." unique_id=1920338604 instance=ExtResource("6_jvsx7")]
-z_index = -3
+z_index = -2
 position = Vector2(2537, 688)
 scale = Vector2(2, 2)
 cor = Color(0.25096, 0.64962953, 0.43389818, 1)
@@ -309,3 +285,6 @@ position = Vector2(3940, 750)
 [node name="Pombo" parent="." unique_id=210578512 instance=ExtResource("10_vsxdp")]
 position = Vector2(800.00006, 373)
 caminho = "1"
+
+[connection signal="entrou" from="carteiro" to="censurador" method="_on_carteiro_entrou"]
+[connection signal="saiu" from="carteiro" to="censurador" method="_on_carteiro_saiu"]
