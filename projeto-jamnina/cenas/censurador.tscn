@@ -21,7 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://b2rti34wkmthx" path="res://artes/guarda/correr3/Ilustração_Sem_Título-4.png" id="19_glk7d"]
 
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_tn3cb"]
-points = PackedVector2Array(13, -30, 130, -32, 179, 3, 132, 30)
+points = PackedVector2Array(13, -30, 188, -29, 239, 2, 188, 25)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_eeh76"]
 animations = [{

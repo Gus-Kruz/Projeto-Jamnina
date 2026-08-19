@@ -62,11 +62,6 @@ script = ExtResource("2_fgfoh")
 position = Vector2(-6.5, 0)
 shape = SubResource("RectangleShape2D_foddy")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=543072039]
-visible = false
-scale = Vector2(0.5, 1)
-texture = ExtResource("2_c6r7t")
-
 [node name="Timer" type="Timer" parent="." unique_id=245916974]
 wait_time = 0.1
 
