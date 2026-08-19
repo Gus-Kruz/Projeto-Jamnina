@@ -25,12 +25,11 @@ z_index = -2
 
 [node name="censurador2" parent="." unique_id=1177385418 node_paths=PackedStringArray("patrol_path") instance=ExtResource("2_0rtfx")]
 position = Vector2(977, 757)
-collision_layer = 1
-collision_mask = 1
 patrol_path = NodePath("../path_patrol")
 
 [node name="carteiro2" parent="." unique_id=178538168 instance=ExtResource("3_geyy0")]
 position = Vector2(107, 756)
+collision_mask = 3
 
 [node name="path_patrol" type="Path2D" parent="." unique_id=142645807]
 curve = SubResource("Curve2D_6bpac")
