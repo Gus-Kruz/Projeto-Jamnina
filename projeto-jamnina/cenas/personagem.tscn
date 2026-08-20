@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://frdpvkflpyv5"]
+
+[ext_resource type="Texture2D" path="res://artes/carteiro/parado/IMG_0196.PNG" id="2_c6r7t"]
+[ext_resource type="Script" uid="uid://bbedmtrruf2uy" path="res://scripts/character_body_2d.gd" id="2_fgfoh"]
+[ext_resource type="Texture2D" path="res://artes/carteiro/andar/IMG_0193.PNG" id="3_c6r7t"]
+[ext_resource type="Texture2D" path="res://artes/carteiro/andar/IMG_0194.PNG" id="4_d05dr"]
+[ext_resource type="Texture2D" path="res://artes/carteiro/andar/IMG_0195.PNG" id="5_foddy"]
+[ext_resource type="Texture2D" path="res://artes/carteiro/pular/Ilustração_Sem_Título-1.png" id="6_foddy"]
+[ext_resource type="Texture2D" path="res://artes/carteiro/pular/Ilustração_Sem_Título-2.png" id="7_3o8vf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_foddy"]
+size = Vector2(19, 112)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3o8vf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_c6r7t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_d05dr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_foddy")
+}],
+"loop": 1,
+"name": &"andar",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_c6r7t")
+}],
+"loop": 1,
+"name": &"parado",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("6_foddy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_3o8vf")
+}, {
+"duration": 2.0,
+"texture": ExtResource("6_foddy")
+}],
+"loop": 1,
+"name": &"pular",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tyg5f"]
+size = Vector2(35, 112)
+
+[node name="carteiro" type="CharacterBody2D" unique_id=1227779810 groups=["Carteiro"]]
+script = ExtResource("2_fgfoh")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1881311006]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1411724335]
+position = Vector2(-6.5, 0)
+shape = SubResource("RectangleShape2D_foddy")
+
+[node name="Timer" type="Timer" parent="." unique_id=245916974]
+wait_time = 0.1
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=708140231]
+offset = Vector2(400, -200)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2071489530]
+z_index = 2
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_3o8vf")
+animation = &"parado"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1474937378 groups=["Carteiro"]]
+position = Vector2(-6.5, 0)
+shape = SubResource("RectangleShape2D_tyg5f")
+
+[node name="coyote" type="Timer" parent="." unique_id=711825353]
+wait_time = 0.05
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="coyote" to="." method="_on_coyote_timeout"]
