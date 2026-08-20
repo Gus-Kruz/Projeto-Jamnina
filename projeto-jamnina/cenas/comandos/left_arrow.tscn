@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://chjft2dey37sr"]
+
+[ext_resource type="Texture2D" uid="uid://bq0nmv0xv6xbx" path="res://recursos/sprites/controles/left_arrow.png" id="1_gq0lw"]
+[ext_resource type="Script" uid="uid://dpcujuygu3peh" path="res://scripts/sprite_2d.gd" id="1_vvto4"]
+
+[node name="LeftArrow" type="Node2D" unique_id=988126983]
+
+[node name="LeftArrow" type="Sprite2D" parent="." unique_id=1156198645]
+z_index = 1
+texture = ExtResource("1_gq0lw")
+script = ExtResource("1_vvto4")

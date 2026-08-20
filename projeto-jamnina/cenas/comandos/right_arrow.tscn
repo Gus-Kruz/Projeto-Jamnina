@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://huh0if88tmg0"]
+
+[ext_resource type="Texture2D" uid="uid://bflrkhncsmpf6" path="res://recursos/sprites/controles/right_arrow.png" id="1_6v40c"]
+[ext_resource type="Script" uid="uid://dpcujuygu3peh" path="res://scripts/sprite_2d.gd" id="1_xv2so"]
+
+[node name="RightArrow" type="Node2D" unique_id=1021312592]
+
+[node name="RightArrow" type="Sprite2D" parent="." unique_id=1772253801]
+z_index = 1
+texture = ExtResource("1_6v40c")
+script = ExtResource("1_xv2so")

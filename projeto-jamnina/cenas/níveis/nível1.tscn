@@ -10,6 +10,11 @@
 [ext_resource type="PackedScene" uid="uid://dw6t8u5rioj4n" path="res://cenas/criacao_niveis/poste3.tscn" id="8_agiav"]
 [ext_resource type="PackedScene" uid="uid://flagns0cbemg" path="res://cenas/criacao_niveis/poste1.tscn" id="9_qes07"]
 [ext_resource type="PackedScene" uid="uid://5hipycajjym0" path="res://cenas/personagens/pombo.tscn" id="10_vsxdp"]
+[ext_resource type="PackedScene" uid="uid://caugcb2i5c31q" path="res://cenas/comandos/up_arrow.tscn" id="11_0rtfx"]
+[ext_resource type="PackedScene" uid="uid://chjft2dey37sr" path="res://cenas/comandos/left_arrow.tscn" id="12_lmsrm"]
+[ext_resource type="PackedScene" uid="uid://huh0if88tmg0" path="res://cenas/comandos/right_arrow.tscn" id="13_jvsx7"]
+[ext_resource type="PackedScene" uid="uid://ckfk4lpenpgw6" path="res://cenas/comandos/down_arrow.tscn" id="14_3846v"]
+[ext_resource type="PackedScene" uid="uid://56e7fxerbnwu" path="res://cenas/comandos/dash.tscn" id="16_agiav"]
 
 [sub_resource type="Curve2D" id="Curve2D_6bpac"]
 _data = {
@@ -70,7 +75,7 @@ position = Vector2(2346, 781)
 position = Vector2(2607, 593)
 
 [node name="Caixa14" parent="." unique_id=1622988673 instance=ExtResource("5_lmsrm")]
-position = Vector2(567, 556)
+position = Vector2(568, 556)
 
 [node name="Barraca2" parent="." unique_id=940644642 instance=ExtResource("6_jvsx7")]
 z_index = -2
@@ -285,6 +290,31 @@ position = Vector2(3940, 750)
 [node name="Pombo" parent="." unique_id=210578512 instance=ExtResource("10_vsxdp")]
 position = Vector2(800.00006, 373)
 caminho = "1"
+
+[node name="UpArrow" parent="." unique_id=1555979238 instance=ExtResource("11_0rtfx")]
+position = Vector2(1162, 660)
+scale = Vector2(1.5, 1.5)
+
+[node name="LeftArrow" parent="." unique_id=988126983 instance=ExtResource("12_lmsrm")]
+position = Vector2(71, 647)
+scale = Vector2(1.5, 1.5)
+
+[node name="RightArrow" parent="." unique_id=1021312592 instance=ExtResource("13_jvsx7")]
+position = Vector2(132, 647)
+scale = Vector2(1.5, 1.5)
+
+[node name="DownArrow" parent="." unique_id=139771513 instance=ExtResource("14_3846v")]
+z_index = -3
+position = Vector2(682, 703)
+scale = Vector2(1.5, 1.5)
+
+[node name="Dash" parent="." unique_id=1443006131 instance=ExtResource("16_agiav")]
+position = Vector2(1601, 466.00003)
+scale = Vector2(1.5, 1.5)
+
+[node name="DownArrow2" parent="." unique_id=34325492 instance=ExtResource("14_3846v")]
+position = Vector2(795.00006, 215.00002)
+scale = Vector2(1.5, 1.5)
 
 [connection signal="entrou" from="carteiro" to="censurador" method="_on_carteiro_entrou"]
 [connection signal="saiu" from="carteiro" to="censurador" method="_on_carteiro_saiu"]

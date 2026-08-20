@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://ckfk4lpenpgw6"]
+
+[ext_resource type="Script" uid="uid://dpcujuygu3peh" path="res://scripts/sprite_2d.gd" id="1_6sqpn"]
+[ext_resource type="Texture2D" uid="uid://bf416hwpo3qer" path="res://recursos/sprites/controles/down_arrow.png" id="1_wl3bu"]
+
+[node name="DownArrow" type="Node2D" unique_id=139771513]
+z_index = 1
+
+[node name="DownArrow" type="Sprite2D" parent="." unique_id=466911851]
+texture = ExtResource("1_wl3bu")
+script = ExtResource("1_6sqpn")

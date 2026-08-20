@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://56e7fxerbnwu"]
+
+[ext_resource type="Script" uid="uid://dpcujuygu3peh" path="res://scripts/sprite_2d.gd" id="1_3nwf6"]
+[ext_resource type="Texture2D" uid="uid://b7uc0in4jnyat" path="res://recursos/sprites/controles/z_key.png" id="1_3t5e6"]
+
+[node name="Dash" type="Node2D" unique_id=1443006131]
+z_index = 1
+
+[node name="ZKey" type="Sprite2D" parent="." unique_id=119187300]
+texture = ExtResource("1_3t5e6")
+script = ExtResource("1_3nwf6")
