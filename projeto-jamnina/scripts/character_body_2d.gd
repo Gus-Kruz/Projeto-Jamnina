@@ -8,6 +8,7 @@ var dentro
 var inside
 var coyote
 var carta
+var entrega = false
 signal entrou
 signal saiu
 
@@ -76,15 +77,19 @@ func _physics_process(delta: float) -> void:
 	elif direcao == "esquerda":
 		$AnimatedSprite2D.flip_h = true 
 		$AnimatedSprite2D.play('andar')
-	elif carta:
-		#$Camera2D.get_target_position() 
-		#$Camera2D.set_zoom($Camera2D.get_zoom() + Vector2(0.25, 0.25))
+	elif carta and !entrega:
+		$Camera2D.offset = $Camera2D.offset.lerp(Vector2(50,0), 5*delta)
+		$Camera2D.set_zoom(Vector2(3,3))
 		$AnimatedSprite2D.play("carta")
 		await $AnimatedSprite2D.animation_finished
 		carta = false
 	else:
 		$AnimatedSprite2D.play('parado')
-		
+	if entrega == true:
+		$Camera2D.offset = $Camera2D.offset.lerp(Vector2(400,-300), 5*delta)
+		$Camera2D.set_zoom(Vector2(1,1))
+		entrega = false
+	
 	move_and_slide()
 
 
@@ -106,3 +111,8 @@ func _on_coyote_timeout() -> void:
 func _on_area_2d_area_entered_pomba(area: Area2D) -> void:
 	if area.is_in_group("pombado"):
 		carta = true
+		entrega = true 
+
+func _on_area_2d_area_exited_pomba(area: Area2D) -> void:
+	if area.is_in_group("pombado"):
+		entrega = true

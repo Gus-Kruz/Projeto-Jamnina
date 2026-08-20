@@ -34,7 +34,7 @@ animations = [{
 "speed": 9.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 7.0,
 "texture": ExtResource("5_7hk5w")
 }, {
 "duration": 1.0,
@@ -60,9 +60,9 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("2_c6r7t")
 }],
-"loop": true,
+"loop": false,
 "name": &"parado",
-"speed": 5.0
+"speed": 1.0
 }, {
 "frames": [{
 "duration": 2.0,
@@ -101,7 +101,7 @@ offset = Vector2(400, -200)
 z_index = 2
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_3o8vf")
-animation = &"andar"
+animation = &"carta"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1474937378 groups=["Carteiro"]]
 position = Vector2(-6.5, 0)
@@ -110,8 +110,9 @@ shape = SubResource("RectangleShape2D_tyg5f")
 [node name="coyote" type="Timer" parent="." unique_id=711825353]
 wait_time = 0.05
 
-[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered_pomba"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited_pomba"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

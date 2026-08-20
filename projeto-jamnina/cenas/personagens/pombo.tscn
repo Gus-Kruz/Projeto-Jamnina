@@ -58,9 +58,9 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_apk3l"]
-size = Vector2(136, 22.333332)
+size = Vector2(126.66667, 22.333332)
 
-[node name="Pombo" type="Node2D" unique_id=1739523321 groups=["pombado"]]
+[node name="Pombo" type="CharacterBody2D" unique_id=540973503 groups=["pombado"]]
 scale = Vector2(1.5, 1.5)
 script = ExtResource("1_orcdd")
 
@@ -74,7 +74,7 @@ frame_progress = 0.27785808
 [node name="Area2D" type="Area2D" parent="." unique_id=460508097 groups=["pombado"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2041067978]
-position = Vector2(-12.66667, -43.833336)
+position = Vector2(-8.000002, -35.333336)
 shape = SubResource("RectangleShape2D_apk3l")
 
 [node name="Label" type="Label" parent="." unique_id=734214499]
