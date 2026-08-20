@@ -7,6 +7,7 @@ var pode
 var dentro
 var inside
 var coyote
+var carta
 signal entrou
 signal saiu
 
@@ -72,8 +73,13 @@ func _physics_process(delta: float) -> void:
 	elif direcao == "esquerda":
 		$AnimatedSprite2D.flip_h = true 
 		$AnimatedSprite2D.play('andar')
+	elif carta:
+		$AnimatedSprite2D.play("carta")
+		await $AnimatedSprite2D.animation_finished
+		carta = false
 	else:
 		$AnimatedSprite2D.play('parado')
+		
 	move_and_slide()
 
 
@@ -81,12 +87,9 @@ func _on_timer_timeout() -> void:
 	SPEED = 500
 	dash = false
 
-
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group("barracas"):
 		dentro = true
-	
-
 
 func _on_area_2d_area_exited(area: Area2D) -> void:
 	if area.is_in_group("barracas"):
@@ -94,3 +97,7 @@ func _on_area_2d_area_exited(area: Area2D) -> void:
 
 func _on_coyote_timeout() -> void:
 	coyote = false
+
+func _on_area_2d_area_entered_pomba(area: Area2D) -> void:
+	if area.is_in_group("pombado"):
+		carta = true

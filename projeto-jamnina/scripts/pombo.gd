@@ -1,4 +1,4 @@
-extends CharacterBody2D
+extends Node2D
 
 var carta = false
 var velocidade = 10

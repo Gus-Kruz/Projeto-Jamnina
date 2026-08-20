@@ -4,9 +4,15 @@
 [ext_resource type="Script" uid="uid://bbedmtrruf2uy" path="res://scripts/character_body_2d.gd" id="2_fgfoh"]
 [ext_resource type="Texture2D" uid="uid://c36df4rricii4" path="res://recursos/sprites/carteiro/andar/IMG_0193.PNG" id="3_c6r7t"]
 [ext_resource type="Texture2D" uid="uid://bgj6leoqsasec" path="res://recursos/sprites/carteiro/andar/IMG_0194.PNG" id="4_d05dr"]
+[ext_resource type="Texture2D" uid="uid://rulh7qoqwiwy" path="res://recursos/sprites/carteiro/carta/Ilustração_Sem_Título-1.png" id="5_7hk5w"]
 [ext_resource type="Texture2D" uid="uid://bc2rfqjohpnsi" path="res://recursos/sprites/carteiro/andar/IMG_0195.PNG" id="5_foddy"]
 [ext_resource type="Texture2D" uid="uid://b6rmbwel5uupm" path="res://recursos/sprites/carteiro/pular/Ilustração_Sem_Título-1.png" id="6_foddy"]
+[ext_resource type="Texture2D" uid="uid://bu23a31yvcm8t" path="res://recursos/sprites/carteiro/carta/Ilustração_Sem_Título-2.png" id="6_jq636"]
 [ext_resource type="Texture2D" uid="uid://dewed3huwrh04" path="res://recursos/sprites/carteiro/pular/Ilustração_Sem_Título-2.png" id="7_3o8vf"]
+[ext_resource type="Texture2D" uid="uid://bksmwg6gfrs6t" path="res://recursos/sprites/carteiro/carta/Ilustração_Sem_Título-3.png" id="7_nyuqo"]
+[ext_resource type="Texture2D" uid="uid://cebqhkccgrgo0" path="res://recursos/sprites/carteiro/carta/Ilustração_Sem_Título-4.png" id="8_y37xf"]
+[ext_resource type="Texture2D" uid="uid://dh5temmsxi0yb" path="res://recursos/sprites/carteiro/carta/Ilustração_Sem_Título-5.png" id="9_j33kr"]
+[ext_resource type="Texture2D" uid="uid://btfnvajcgsylu" path="res://recursos/sprites/carteiro/carta/Ilustração_Sem_Título-6.png" id="10_ap0wa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_foddy"]
 size = Vector2(19, 112)
@@ -26,6 +32,29 @@ animations = [{
 "loop": true,
 "name": &"andar",
 "speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_7hk5w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_jq636")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_nyuqo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_y37xf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_j33kr")
+}, {
+"duration": 4.0,
+"texture": ExtResource("10_ap0wa")
+}],
+"loop": false,
+"name": &"carta",
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -72,7 +101,7 @@ offset = Vector2(400, -200)
 z_index = 2
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_3o8vf")
-animation = &"parado"
+animation = &"andar"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1474937378 groups=["Carteiro"]]
 position = Vector2(-6.5, 0)
@@ -82,6 +111,8 @@ shape = SubResource("RectangleShape2D_tyg5f")
 wait_time = 0.05
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered_pomba"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="timeout" from="coyote" to="." method="_on_coyote_timeout"]
