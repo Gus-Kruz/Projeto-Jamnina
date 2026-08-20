@@ -11,6 +11,9 @@ var carta
 signal entrou
 signal saiu
 
+func _ready() -> void:
+	pass
+		
 func _physics_process(delta: float) -> void:
 	if inside:
 		if Input.is_action_just_pressed("baixo"):
@@ -74,6 +77,8 @@ func _physics_process(delta: float) -> void:
 		$AnimatedSprite2D.flip_h = true 
 		$AnimatedSprite2D.play('andar')
 	elif carta:
+		#$Camera2D.get_target_position() 
+		#$Camera2D.set_zoom($Camera2D.get_zoom() + Vector2(0.25, 0.25))
 		$AnimatedSprite2D.play("carta")
 		await $AnimatedSprite2D.animation_finished
 		carta = false

@@ -19,7 +19,7 @@ grow_vertical = 2
 script = ExtResource("1_rd1mj")
 frase_alvo = Array[String](["comia", "a", "esposa"])
 frase_inicial = Array[String](["a", "esposa", "comia"])
-proxima_fase = "2"
+fase = "1"
 
 [node name="Fundo" type="TextureRect" parent="." unique_id=1192648343]
 layout_mode = 1
