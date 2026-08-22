@@ -15,7 +15,7 @@
 
 [sub_resource type="Curve2D" id="Curve2D_s1qmr"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 353, 760, 0, 0, 0, 0, 725, 760)
+"points": PackedVector2Array(0, 0, 0, 0, 516, 760, 0, 0, 0, 0, 1272, 760)
 }
 point_count = 2
 
@@ -30,12 +30,13 @@ z_index = 2
 position = Vector2(137, 752)
 
 [node name="barraca" parent="." unique_id=1769249425 instance=ExtResource("3_vi2ur")]
-position = Vector2(537, 688)
+position = Vector2(656, 694)
 scale = Vector2(2, 2)
 cor = Color(2.5027991e-06, 0.6027093, 0.6028643, 1)
 
 [node name="censurador" parent="." unique_id=2135449001 node_paths=PackedStringArray("patrol_path") instance=ExtResource("4_p2jsg")]
 position = Vector2(410, 758)
+sprite_number = 3
 patrol_path = NodePath("../Path2D")
 
 [node name="Path2D" type="Path2D" parent="." unique_id=1333579381]
@@ -48,12 +49,15 @@ scale = Vector2(2, 2)
 cor = Color(1, 0.1882353, 1, 1)
 
 [node name="Node2D" parent="." unique_id=554516880 instance=ExtResource("5_v3j2d")]
+z_index = -1
 position = Vector2(938, 781)
 
 [node name="Node2D2" parent="." unique_id=1284199120 instance=ExtResource("5_v3j2d")]
+z_index = -1
 position = Vector2(892, 781)
 
 [node name="Node2D3" parent="." unique_id=445318422 instance=ExtResource("5_v3j2d")]
+z_index = -1
 position = Vector2(892, 750)
 
 [node name="Node2D4" parent="." unique_id=990588737 instance=ExtResource("5_v3j2d")]

@@ -4,12 +4,19 @@
 [ext_resource type="Texture2D" uid="uid://bmfouetmpeefm" path="res://recursos/sprites/puzzle_carta/papel_amassado.jpg" id="2_of7tc"]
 [ext_resource type="FontFile" uid="uid://b14d6kqdef1ml" path="res://recursos/fontes/Daydream DEMO.otf" id="3_vaiuh"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_epxch"]
+[sub_resource type="LabelSettings" id="LabelSettings_titulo_escondido"]
 font = ExtResource("3_vaiuh")
-font_size = 30
-font_color = Color(0.15806761, 0.73513556, 0.44837993, 1)
+font_size = 20
+font_color = Color(0, 0, 0, 1)
 
-[node name="CartaBase" type="Control" unique_id=1012941904]
+[sub_resource type="LabelSettings" id="LabelSettings_vitoria"]
+font = ExtResource("3_vaiuh")
+font_size = 36
+font_color = Color(0.15806761, 0.73513556, 0.44837993, 1)
+outline_size = 8
+outline_color = Color(0, 0, 0, 0.8)
+
+[node name="CartaBase3" type="Control" unique_id=1012941904]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -17,9 +24,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_j3t0r")
-frase_alvo = Array[String](["eu", "e", "la", "ele"])
-frase_inicial = Array[String](["la", "ele", "e", "eu"])
+texto_carta = "ei macho, tu ficou sabendo?
+[o] prefeito patrocinou uma festa junina, boa demais!
+[com] ele a gente vai pra frente, [boto] fe demais.
+ainda [vi] ele e [a] [esposa], que honra!
+chega mais cara!!"
+frase_escondida = Array[String](["vi", "o", "boto", "com", "a", "esposa"])
 proxima_fase = "final"
+tamanho_pecas_e_slots = Vector2(140, 44)
 
 [node name="Fundo" type="TextureRect" parent="." unique_id=1192648343]
 layout_mode = 1
@@ -32,56 +44,71 @@ mouse_filter = 2
 texture = ExtResource("2_of7tc")
 expand_mode = 2
 
-[node name="TextoVitoria" type="Label" parent="." unique_id=621344921]
-visible = false
+[node name="MargemCarta" type="MarginContainer" parent="." unique_id=1849301824]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -100.0
-offset_top = -100.0
-offset_right = 100.0
-offset_bottom = -50.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0.2, 0.8, 0.2, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 4
-theme_override_font_sizes/font_size = 32
-text = "Carta Decifrada!"
-label_settings = SubResource("LabelSettings_epxch")
+theme_override_constants/margin_left = 120
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 120
+theme_override_constants/margin_bottom = 80
+
+[node name="ConteudoCarta" type="VBoxContainer" parent="MargemCarta" unique_id=1948201732]
+layout_mode = 2
+theme_override_constants/separation = 40
+alignment = 1
+
+[node name="TextoCartaContainer" type="VBoxContainer" parent="MargemCarta/ConteudoCarta" unique_id=1492048219]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="AreaFraseEscondida" type="VBoxContainer" parent="MargemCarta/ConteudoCarta" unique_id=1294820491]
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="LabelFraseEscondida" type="Label" parent="MargemCarta/ConteudoCarta/AreaFraseEscondida" unique_id=1738491024]
+layout_mode = 2
+text = "Mensagem Secreta"
+label_settings = SubResource("LabelSettings_titulo_escondido")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="SlotsContainer" type="HBoxContainer" parent="." unique_id=247615185]
+[node name="SlotsContainer" type="HBoxContainer" parent="MargemCarta/ConteudoCarta/AreaFraseEscondida" unique_id=247615185]
+layout_mode = 2
+theme_override_constants/separation = 14
+alignment = 1
+
+[node name="PecasContainer" type="Control" parent="." unique_id=280645284]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextoVitoria" type="Label" parent="." unique_id=621344921]
+visible = false
+z_index = 100
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -200.0
-offset_top = -20.0
-offset_right = 200.0
-offset_bottom = 20.0
+offset_left = -300.0
+offset_top = -60.0
+offset_right = 300.0
+offset_bottom = 60.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 10
-alignment = 1
-
-[node name="PecasIniciais" type="Control" parent="." unique_id=280645284]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -300.0
-offset_top = -150.0
-offset_right = 300.0
-offset_bottom = -50.0
-grow_horizontal = 2
-grow_vertical = 0
-mouse_filter = 2
+text = "ai tem coisa hein prefeito..."
+label_settings = SubResource("LabelSettings_vitoria")
+horizontal_alignment = 1
+vertical_alignment = 1

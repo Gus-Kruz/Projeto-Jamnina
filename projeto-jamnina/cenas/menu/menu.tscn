@@ -2,11 +2,15 @@
 
 [ext_resource type="Script" uid="uid://dgx0e78vdlmfo" path="res://scripts/menu.gd" id="1_qcnrj"]
 [ext_resource type="Texture2D" uid="uid://jad833r7pty2" path="res://recursos/sprites/menu/1719793.jpg" id="2_qygre"]
-[ext_resource type="Texture2D" uid="uid://gynevramkb6x" path="res://recursos/sprites/menu/Logo.png" id="3_6l0hd"]
+[ext_resource type="Texture2D" uid="uid://bprr6w1ob06x" path="res://recursos/sprites/Capa.png" id="3_nkbd6"]
 [ext_resource type="Texture2D" uid="uid://c6cp8s4bptnhh" path="res://recursos/sprites/menu/Jogar.png" id="4_s4mth"]
 [ext_resource type="Texture2D" uid="uid://c67dhcvew6w5i" path="res://recursos/sprites/menu/Creditos.png" id="6_lvcsh"]
 [ext_resource type="Texture2D" uid="uid://ja8vgkbo2kmh" path="res://recursos/sprites/menu/Sair.png" id="7_ktxou"]
-[ext_resource type="Texture2D" uid="uid://ci2p6gjr2by74" path="res://recursos/sprites/menu/Versão.png" id="8_qygre"]
+[ext_resource type="FontFile" uid="uid://b14d6kqdef1ml" path="res://recursos/fontes/Daydream DEMO.otf" id="7_nkbd6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_r8x8m"]
+font = ExtResource("7_nkbd6")
+font_size = 32
 
 [node name="Menu" type="Node2D" unique_id=1588047816]
 script = ExtResource("1_qcnrj")
@@ -38,11 +42,12 @@ size_flags_horizontal = 6
 [node name="Logo" type="TextureRect" parent="Fundo/MarginContainer/HBoxContainer/VBoxContainer" unique_id=7644447]
 layout_mode = 2
 size_flags_vertical = 2
-texture = ExtResource("3_6l0hd")
+texture = ExtResource("3_nkbd6")
 
 [node name="MenuOptions" type="VBoxContainer" parent="Fundo/MarginContainer/HBoxContainer/VBoxContainer" unique_id=607450954]
 layout_mode = 2
-size_flags_vertical = 10
+size_flags_horizontal = 4
+size_flags_vertical = 3
 
 [node name="Jogar" type="TextureButton" parent="Fundo/MarginContainer/HBoxContainer/VBoxContainer/MenuOptions" unique_id=2138788355]
 layout_mode = 2
@@ -57,9 +62,12 @@ texture_normal = ExtResource("6_lvcsh")
 layout_mode = 2
 texture_normal = ExtResource("7_ktxou")
 
-[node name="Versão" type="TextureRect" parent="Fundo/MarginContainer/HBoxContainer/VBoxContainer" unique_id=144734386]
+[node name="Label" type="Label" parent="Fundo/MarginContainer/HBoxContainer/VBoxContainer" unique_id=650335980]
 layout_mode = 2
-texture = ExtResource("8_qygre")
+size_flags_vertical = 0
+text = "versao 2.78"
+label_settings = SubResource("LabelSettings_r8x8m")
+horizontal_alignment = 1
 
 [connection signal="pressed" from="Fundo/MarginContainer/HBoxContainer/VBoxContainer/MenuOptions/Jogar" to="." method="_on_jogar_pressed"]
 [connection signal="pressed" from="Fundo/MarginContainer/HBoxContainer/VBoxContainer/MenuOptions/Creditos" to="." method="_on_creditos_pressed"]

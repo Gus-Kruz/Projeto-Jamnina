@@ -23,9 +23,9 @@ font = ExtResource("2_xvpu2")
 font_color = Color(0, 0, 0, 1)
 
 [node name="PedacoCarta" type="PanelContainer" unique_id=1768053979]
-custom_minimum_size = Vector2(160, 60)
-offset_right = 160.0
-offset_bottom = 60.0
+custom_minimum_size = Vector2(140, 44)
+offset_right = 130.0
+offset_bottom = 44.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_pedaco")
 script = ExtResource("1_pedaco")
 

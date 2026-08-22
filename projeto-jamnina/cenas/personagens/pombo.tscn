@@ -20,7 +20,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("2_yvo7f")
 }],
-"loop": true,
+"loop": 1,
 "name": &"parado",
 "speed": 1.5
 }, {
@@ -52,13 +52,18 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("4_afw54")
 }],
-"loop": true,
+"loop": 1,
 "name": &"voando",
 "speed": 12.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_apk3l"]
 size = Vector2(126.66667, 22.333332)
+
+[sub_resource type="LabelSettings" id="LabelSettings_rd1mj"]
+line_spacing = 2.0
+font = ExtResource("10_afw54")
+font_size = 8
 
 [node name="Pombo" type="CharacterBody2D" unique_id=540973503 groups=["pombado"]]
 scale = Vector2(1.5, 1.5)
@@ -85,6 +90,7 @@ offset_bottom = -71.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("10_afw54")
 theme_override_font_sizes/font_size = 7
+label_settings = SubResource("LabelSettings_rd1mj")
 horizontal_alignment = 1
 autowrap_mode = 2
 
