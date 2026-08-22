@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dp4nl8qqjsw0v"]
 
+[ext_resource type="Script" uid="uid://ch55x1gk6e5bh" path="res://scripts/nível_1.gd" id="1_t7blp"]
 [ext_resource type="PackedScene" uid="uid://df7hli5fxd15g" path="res://cenas/criacao_niveis/fundo.tscn" id="1_xwexc"]
 [ext_resource type="PackedScene" uid="uid://bdlq2vd2awk4h" path="res://cenas/personagens/censurador.tscn" id="2_oolwa"]
 [ext_resource type="PackedScene" uid="uid://cith6nwb12npx" path="res://cenas/personagens/personagem.tscn" id="3_e4thi"]
@@ -9,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dw6t8u5rioj4n" path="res://cenas/criacao_niveis/poste3.tscn" id="7_w24lt"]
 [ext_resource type="PackedScene" uid="uid://cl2bjalmnbsvy" path="res://cenas/criacao_niveis/caixa.tscn" id="8_t7blp"]
 [ext_resource type="PackedScene" uid="uid://5hipycajjym0" path="res://cenas/personagens/pombo.tscn" id="9_w24lt"]
+[ext_resource type="AudioStream" uid="uid://cw6jdsb370f81" path="res://recursos/sons/musica/UwkJ3CZx (mp3cut.net).mp3" id="11_33i5f"]
 
 [sub_resource type="Curve2D" id="Curve2D_6bpac"]
 _data = {
@@ -17,6 +19,7 @@ _data = {
 point_count = 2
 
 [node name="Node2D" type="Node2D" unique_id=1497396039]
+script = ExtResource("1_t7blp")
 
 [node name="Fundo" parent="." unique_id=1542186277 instance=ExtResource("1_xwexc")]
 show_behind_parent = true
@@ -107,6 +110,10 @@ position = Vector2(724, 592)
 [node name="Pombo" parent="." unique_id=210578512 instance=ExtResource("9_w24lt")]
 position = Vector2(287, 374)
 caminho = "2"
+
+[node name="UwkJ3cZx(mp3Cut_net)" type="AudioStreamPlayer" parent="." unique_id=1153957004]
+stream = ExtResource("11_33i5f")
+volume_db = -20.0
 
 [connection signal="entrou" from="carteiro" to="censurador" method="_on_carteiro_entrou"]
 [connection signal="saiu" from="carteiro" to="censurador" method="_on_carteiro_saiu"]

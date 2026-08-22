@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://pdlncy8s6vfx"]
 
+[ext_resource type="Script" uid="uid://ch55x1gk6e5bh" path="res://scripts/nível_1.gd" id="1_agiav"]
 [ext_resource type="PackedScene" uid="uid://df7hli5fxd15g" path="res://cenas/criacao_niveis/fundo.tscn" id="1_nhal8"]
 [ext_resource type="PackedScene" uid="uid://bdlq2vd2awk4h" path="res://cenas/personagens/censurador.tscn" id="2_0rtfx"]
 [ext_resource type="PackedScene" uid="uid://cith6nwb12npx" path="res://cenas/personagens/personagem.tscn" id="3_geyy0"]
@@ -15,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://huh0if88tmg0" path="res://cenas/comandos/right_arrow.tscn" id="13_jvsx7"]
 [ext_resource type="PackedScene" uid="uid://ckfk4lpenpgw6" path="res://cenas/comandos/down_arrow.tscn" id="14_3846v"]
 [ext_resource type="PackedScene" uid="uid://56e7fxerbnwu" path="res://cenas/comandos/dash.tscn" id="16_agiav"]
+[ext_resource type="AudioStream" uid="uid://cw6jdsb370f81" path="res://recursos/sons/musica/UwkJ3CZx (mp3cut.net).mp3" id="17_qes07"]
 
 [sub_resource type="Curve2D" id="Curve2D_6bpac"]
 _data = {
@@ -23,6 +25,7 @@ _data = {
 point_count = 2
 
 [node name="Node2D" type="Node2D" unique_id=1497396039]
+script = ExtResource("1_agiav")
 
 [node name="Fundo" parent="." unique_id=1542186277 instance=ExtResource("1_nhal8")]
 show_behind_parent = true
@@ -316,5 +319,11 @@ scale = Vector2(1.5, 1.5)
 position = Vector2(795.00006, 215.00002)
 scale = Vector2(1.5, 1.5)
 
+[node name="UwkJ3cZx(mp3Cut_net)" type="AudioStreamPlayer" parent="." unique_id=789383706]
+stream = ExtResource("17_qes07")
+volume_db = -22.0
+autoplay = true
+
 [connection signal="entrou" from="carteiro" to="censurador" method="_on_carteiro_entrou"]
 [connection signal="saiu" from="carteiro" to="censurador" method="_on_carteiro_saiu"]
+[connection signal="finished" from="UwkJ3cZx(mp3Cut_net)" to="." method="_on_uwk_j_3c_zxmp_3_cut_net_finished"]
