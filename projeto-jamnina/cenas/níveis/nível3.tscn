@@ -27,7 +27,7 @@ z_index = -2
 
 [node name="carteiro" parent="." unique_id=1227779810 instance=ExtResource("2_vqpxo")]
 z_index = 2
-position = Vector2(580, 505)
+position = Vector2(137, 752)
 
 [node name="barraca" parent="." unique_id=1769249425 instance=ExtResource("3_vi2ur")]
 position = Vector2(537, 688)
