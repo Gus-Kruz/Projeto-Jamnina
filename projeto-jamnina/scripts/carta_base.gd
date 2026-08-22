@@ -77,7 +77,6 @@ func _on_pedaco_solto(pedaco: PedacoCarta) -> void:
 
 func verificar_vitoria() -> void:
 	var tudo_certo = true
-	
 	for slot in slots:
 		if slot.pedaco_encaixado == null:
 			tudo_certo = false

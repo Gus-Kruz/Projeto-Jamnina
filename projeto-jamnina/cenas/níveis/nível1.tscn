@@ -322,7 +322,6 @@ scale = Vector2(1.5, 1.5)
 [node name="UwkJ3cZx(mp3Cut_net)" type="AudioStreamPlayer" parent="." unique_id=789383706]
 stream = ExtResource("17_qes07")
 volume_db = -22.0
-autoplay = true
 
 [connection signal="entrou" from="carteiro" to="censurador" method="_on_carteiro_entrou"]
 [connection signal="saiu" from="carteiro" to="censurador" method="_on_carteiro_saiu"]
